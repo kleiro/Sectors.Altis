@@ -34,8 +34,8 @@ class CfgDebriefing {
 class Params{
 	class WeaponSet{
 		title = "Weapon Set";
-		values[] = {0};
-		texts[] = {"Base Vanilla"};
+		values[] = {0,1,2};
+		texts[] = {"Base Vanilla", "Apex", "Pistols Only"};
 		default = 0;
 	};
 	class BluDifficulty{

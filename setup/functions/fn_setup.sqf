@@ -2,7 +2,7 @@
  * @Author: MoarRightRudder 
  * @Date: 2018-03-29 14:50:18 
  * @Last Modified by: MoarRightRudder
- * @Last Modified time: 2018-04-01 19:23:50
+ * @Last Modified time: 2018-04-03 12:24:18
  */
 
 //Setup - Adds base spawns, finds sectors, determines group behaviours and sets their init objective
@@ -52,7 +52,7 @@ missionNameSpace setVariable ["triggers", _triggers];
 		_unit addEventHandler ["Fired", {(_this select 0) setVariable ["lastFired", diag_tickTime];}];
 		_unit addEventHandler ["Respawn", {[_this select 0] spawn psq_fnc_aiRespawn;[side (_this select 0), -1] call BIS_fnc_respawnTickets;}];
 
-		[_unit] remoteExec ["psq_fnc_loadoutSet", _unit, false];
+		[_unit] remoteExec ["psq_fnc_setLoadout", _unit, false];
 		
 		switch (side _unit) do {
 			case west :{
@@ -73,8 +73,37 @@ missionNameSpace setVariable ["triggers", _triggers];
 
 }forEach allGroups;
 
-{[west, _x] call BIS_fnc_addRespawnInventory;}forEach ((missionNamespace getVariable "bluInventory") select ("WeaponSet" call BIS_fnc_getParamValue));
-{[east, _x] call BIS_fnc_addRespawnInventory;}forEach ((missionNamespace getVariable "redInventory") select ("WeaponSet" call BIS_fnc_getParamValue));
+_loadoutSet = switch ("WeaponSet" call BIS_fnc_getParamValue) do {
+	//Vanilla
+	case 0:{
+		_westSet = ((missionNamespace getVariable ("westInventory")) select 0);
+		_eastSet = ((missionNamespace getVariable ("eastInventory")) select 0);
+		_set = [_westSet, _eastSet];
+		_set
+	};
+
+	//Vanilla + Apex
+	case 1:{
+		_westSet = ((missionNamespace getVariable ("westInventory")) select 0);
+		_westSet append ((missionNamespace getVariable ("westInventory")) select 1);
+
+		_eastSet = ((missionNamespace getVariable ("eastInventory")) select 0);
+		_eastSet append ((missionNamespace getVariable ("eastInventory")) select 1);
+		_set = [_westSet, _eastSet];
+		_set
+	};
+
+	//Pistols Only 
+	case 2:{
+		//Whenever we add RHS or CUP mods, add the loadout indexes to an array [3,7,10] and selectRandom instead of select 2
+		_westSet = ((missionNamespace getVariable ("westInventory")) select 2);
+		_eastSet = ((missionNamespace getVariable ("eastInventory")) select 2);
+		_set = [_westSet, _eastSet];
+		_set
+	};
+};
+{[west, _x] call BIS_fnc_addRespawnInventory;}forEach (_loadoutSet select 0);
+{[east, _x] call BIS_fnc_addRespawnInventory;}forEach (_loadoutSet select 1);
 
 ["init","bull"] call psq_fnc_sectorChange;
 

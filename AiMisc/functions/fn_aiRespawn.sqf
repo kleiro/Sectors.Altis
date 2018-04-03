@@ -2,7 +2,7 @@
  * @Author: MoarRightRudder 
  * @Date: 2018-03-30 08:47:17 
  * @Last Modified by: MoarRightRudder
- * @Last Modified time: 2018-04-01 16:07:53
+ * @Last Modified time: 2018-04-03 12:24:46
  */
 
 params ["_unit", "_slDistance","_closestTrigger","_closestTriggerDistance","_spawnPos"];
@@ -77,7 +77,7 @@ switch (true) do {
 };
 
 //Set the units loadout
-[_unit] remoteExec ["psq_fnc_loadoutSet", _unit, false];
+[_unit] call psq_fnc_setLoadout;
 
 //Move the unit to the correct location
 _unit setPos _spawnPos;
