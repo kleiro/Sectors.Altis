@@ -9,6 +9,8 @@
 
 addMissionEventHandler ["handleDisconnect", {(_this select 0) setVariable ["isPlayer", false, true];}];
 
+missionNamespace setVariable ["debug", false]; //Enables zeus debug when set to true
+
 [] call psq_fnc_startParams;
 [] spawn psq_fnc_setup;
 

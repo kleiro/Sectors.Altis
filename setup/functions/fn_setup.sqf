@@ -110,4 +110,5 @@ _loadoutSet = switch ("WeaponSet" call BIS_fnc_getParamValue) do {
 uisleep 10;
 
 [] spawn psq_fnc_fsmLoop;
-[] spawn psq_fnc_zeusDebug;
+
+if(missionNamespace getVariable "debug") then {[] spawn psq_fnc_zeusDebug;};
