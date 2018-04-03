@@ -1,0 +1,739 @@
+/*%FSM<COMPILE "F:\Steam\steamapps\common\Arma 3 Tools\FSMEditor\scriptedFSM.cfg, unitMove">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"Init",0,250,-653.195862,-777.113464,-563.195862,-727.113464,0.000000,"Init"};
+item1[] = {"Objective_Exists",4,218,-653.026978,-861.328674,-563.026978,-811.328674,50.000000,"Objective" \n "Exists"};
+item2[] = {"Other",8,218,-510.906433,-776.920654,-420.906433,-726.920654,0.000000,"Other"};
+item3[] = {"End",1,250,-386.774445,-776.142822,-296.774384,-726.142822,0.000000,"End"};
+item4[] = {"Player_Check",2,250,-660.630737,-947.362976,-570.630737,-897.363037,0.000000,"Player" \n "Check"};
+item5[] = {"Player",4,218,-783.966003,-1044.086182,-693.966003,-994.086182,50.000000,"Player"};
+item6[] = {"AI",8,218,-523.966919,-1042.062988,-433.966919,-992.063049,0.000000,"AI"};
+item7[] = {"Objective_Still",2,250,-957.937683,-1082.803223,-867.937683,-1032.803223,0.000000,"Objective" \n "Still Same"};
+item8[] = {"Yes",4,218,-957.942505,-1179.287598,-867.942444,-1129.287598,50.000000,"Yes"};
+item9[] = {"No",8,218,-1057.119873,-1179.732300,-967.119934,-1129.732300,25.000000,"No"};
+item10[] = {"Wait_Time",2,250,-821.666443,-1178.637939,-731.666443,-1128.637817,0.000000,"Wait" \n "Time"};
+item11[] = {"Wait",4,218,-733.250671,-1111.636108,-643.250671,-1061.636108,0.000000,"Wait"};
+item12[] = {"Set_New__Task__",2,250,-1056.874756,-1263.013062,-966.874634,-1213.012939,0.000000,"Set New " \n "Task & WP"};
+item13[] = {"Continue",8,218,-926.726501,-1261.989502,-836.726501,-1211.989502,0.000000,"Continue"};
+item14[] = {"Objective_Still_1",2,250,-358.414978,-1081.002930,-268.414978,-1031.002930,0.000000,"Objective" \n "Still Same"};
+item15[] = {"Yes",4,218,-240.080688,-1153.168091,-150.080627,-1103.168091,50.000000,"Yes"};
+item16[] = {"No",8,218,-359.649536,-1167.728516,-269.649536,-1117.728516,25.000000,"No"};
+item17[] = {"Combat_Check",2,250,-198.538666,-1393.440063,-108.538643,-1343.440063,0.000000,"Combat" \n "Check"};
+item18[] = {"In_combat",4,218,-84.431290,-1392.598389,5.568710,-1342.598389,100.000000,"In combat"};
+item19[] = {"Not_in_Combat",8,218,-194.344131,-1463.915894,-104.344116,-1413.915894,0.000000,"Not in" \n "Combat"};
+item20[] = {"At_Objective_Che",2,250,-157.431763,-1223.950806,-67.431732,-1173.950806,0.000000,"At" \n "Objective" \n "Check"};
+item21[] = {"Arrived",4,218,-161.626877,-1290.234009,-71.626892,-1240.234009,100.000000,"Arrived"};
+item22[] = {"Not_Arrived",8,218,-41.837906,-1292.528564,48.162094,-1242.528564,50.000000,"Not" \n "Arrived"};
+item23[] = {"Combat_Check_1",2,250,56.239319,-1361.295288,146.239349,-1311.295288,0.000000,"Combat" \n "Check"};
+item24[] = {"In_combat",4,218,168.489334,-1362.310913,258.489319,-1312.310913,100.000000,"In combat"};
+item25[] = {"__Combat__Moving",4,218,152.683441,-1424.341675,242.683441,-1374.341675,50.000000,"!Combat" \n "!Moving"};
+item26[] = {"Keep_Moving",2,4346,152.987762,-1493.619385,242.987762,-1443.619385,0.000000,"Keep Moving"};
+item27[] = {"Recently_Moved_",2,250,253.898285,-1422.448364,343.898315,-1372.448364,0.000000,"Recently" \n "Moved?"};
+item28[] = {"",7,210,513.608887,-1727.348633,521.608887,-1719.348633,0.000000,""};
+item29[] = {"No",4,218,253.747711,-1517.265503,343.747681,-1467.265503,50.000000,"No"};
+item30[] = {"Force_Move",2,250,253.309174,-1585.372437,343.309204,-1535.372437,0.000000,"Force Move"};
+item31[] = {"",7,210,-161.955124,-1655.662109,-153.955109,-1647.662109,0.000000,""};
+item32[] = {"Recently_Moved_into",2,250,-49.480957,-1473.881470,40.519058,-1423.881348,0.000000,"Recently" \n "Moved into" \n "Cover?"};
+item33[] = {"Set_New_Task___W",2,250,-360.671021,-1254.183838,-270.671021,-1204.183838,0.000000,"Set New" \n "Task & WP"};
+item34[] = {"No",4,218,-31.754555,-1538.459473,58.245438,-1488.459473,50.000000,"No"};
+item35[] = {"Hold",2,250,-202.886810,-1539.283691,-112.886780,-1489.283691,0.000000,"Hold"};
+item36[] = {"Move_to_New_Cove",2,250,-7.962250,-1610.773682,82.037766,-1560.773682,0.000000,"Move to" \n "New Cover"};
+item37[] = {"Wait",4,218,-587.689697,-1748.218628,-497.689697,-1698.218628,0.000000,"Wait"};
+item38[] = {"Script_Done",4,218,253.481049,-1651.649780,343.481049,-1601.649780,0.000000,"Script" \n "Done"};
+item39[] = {"Continue",2,250,114.833313,-1692.905884,204.833374,-1642.905884,0.000000,"Continue"};
+item40[] = {"Dead_Empty",4,218,-519.520264,-864.961670,-429.520264,-814.961670,1000.000000,"Dead" \n "Empty"};
+item41[] = {"__Combat_Moving",8,218,56.275055,-1423.950317,146.275055,-1373.950317,0.000000,"!Combat" \n "Moving"};
+item42[] = {"Contine",8,218,152.255737,-1562.325928,242.255737,-1512.325928,0.000000,"Contine"};
+item43[] = {"Script_Done",4,218,-7.678772,-1677.847656,82.321228,-1627.847656,0.000000,"Script" \n "Done"};
+item44[] = {"Continue_1",2,250,-119.309967,-1676.532349,-29.309906,-1626.532349,0.000000,"Continue"};
+link0[] = {0,1};
+link1[] = {0,2};
+link2[] = {1,4};
+link3[] = {2,3};
+link4[] = {4,5};
+link5[] = {4,6};
+link6[] = {4,40};
+link7[] = {5,7};
+link8[] = {6,14};
+link9[] = {7,8};
+link10[] = {7,9};
+link11[] = {8,10};
+link12[] = {9,12};
+link13[] = {10,11};
+link14[] = {11,4};
+link15[] = {12,13};
+link16[] = {13,10};
+link17[] = {14,15};
+link18[] = {14,16};
+link19[] = {15,20};
+link20[] = {16,33};
+link21[] = {17,18};
+link22[] = {17,19};
+link23[] = {18,32};
+link24[] = {19,35};
+link25[] = {20,21};
+link26[] = {20,22};
+link27[] = {21,17};
+link28[] = {22,23};
+link29[] = {23,24};
+link30[] = {23,25};
+link31[] = {23,41};
+link32[] = {24,27};
+link33[] = {25,26};
+link34[] = {26,42};
+link35[] = {27,28};
+link36[] = {27,29};
+link37[] = {28,37};
+link38[] = {29,30};
+link39[] = {30,38};
+link40[] = {31,37};
+link41[] = {32,31};
+link42[] = {32,34};
+link43[] = {33,37};
+link44[] = {34,36};
+link45[] = {35,31};
+link46[] = {36,43};
+link47[] = {37,4};
+link48[] = {38,39};
+link49[] = {39,28};
+link50[] = {40,3};
+link51[] = {41,39};
+link52[] = {42,39};
+link53[] = {43,44};
+link54[] = {44,31};
+globals[] = {0.000000,0,0,0,0,640,480,3,68,6316128,1,-119.045578,500.037537,-1246.619141,-1756.912598,791,652,1};
+window[] = {0,-1,-1,-1,-1,999,-1890,-100,175,1,809};
+*//*%FSM</HEAD>*/
+class FSM
+{
+        fsmName = "unitMove";
+        class States
+        {
+                /*%FSM<STATE "Init">*/
+                class Init
+                {
+                        name = "Init";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/"params [""_unit"", ""_objective"", ""_group""];" \n
+                         "_group = group _unit;" \n
+                         "//diag_log format[""*** OUTPUT: Running for %1"", _unit];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Objective_Exists">*/
+                                class Objective_Exists
+                                {
+                                        itemno = 1;
+                                        priority = 50.000000;
+                                        to="Player_Check";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!isNil {_group getVariable [""objective"", nil]}"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Other">*/
+                                class Other
+                                {
+                                        itemno = 2;
+                                        priority = 0.000000;
+                                        to="End";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "End">*/
+                class End
+                {
+                        name = "End";
+                        itemno = 3;
+                        init = /*%FSM<STATEINIT""">*/"_unit setVariable [""fsmActive"", false, true];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Player_Check">*/
+                class Player_Check
+                {
+                        name = "Player_Check";
+                        itemno = 4;
+                        init = /*%FSM<STATEINIT""">*/"_cond = isPlayer _unit;" \n
+                         "//diag_log format[""*** OUTPUT: objective exists for %1"", _unit];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Dead_Empty">*/
+                                class Dead_Empty
+                                {
+                                        itemno = 40;
+                                        priority = 1000.000000;
+                                        to="End";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(isNil ""_unit"") || !(alive _unit) || (isNull _unit)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Player">*/
+                                class Player
+                                {
+                                        itemno = 5;
+                                        priority = 50.000000;
+                                        to="Objective_Still";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_unit getVariable [""isPlayer"", false];"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "AI">*/
+                                class AI
+                                {
+                                        itemno = 6;
+                                        priority = 0.000000;
+                                        to="Objective_Still_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Objective_Still">*/
+                class Objective_Still
+                {
+                        name = "Objective_Still";
+                        itemno = 7;
+                        init = /*%FSM<STATEINIT""">*/"_currentObjective = waypointPosition[_group, 0];" \n
+                         "//diag_log format[""### Player output: %1, %2"", _unit, _group getVariable ""behaviour""];" \n
+                         "_objective = getPos (_group getVariable ""Objective"");" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Yes">*/
+                                class Yes
+                                {
+                                        itemno = 8;
+                                        priority = 50.000000;
+                                        to="Wait_Time";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(_currentObjective distance _objective) < 5"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "No">*/
+                                class No
+                                {
+                                        itemno = 9;
+                                        priority = 25.000000;
+                                        to="Set_New__Task__";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Wait_Time">*/
+                class Wait_Time
+                {
+                        name = "Wait_Time";
+                        itemno = 10;
+                        init = /*%FSM<STATEINIT""">*/"_wait = diag_tickTime + 5;" \n
+                         "//diag_log ""****wait"";"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Wait">*/
+                                class Wait
+                                {
+                                        itemno = 11;
+                                        priority = 0.000000;
+                                        to="Player_Check";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"diag_tickTime > _wait"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Set_New__Task__">*/
+                class Set_New__Task__
+                {
+                        name = "Set_New__Task__";
+                        itemno = 12;
+                        init = /*%FSM<STATEINIT""">*/"_objective = _group getVariable ""objective"";" \n
+                         "_locationDsg = """";" \n
+                         "scopeName ""main"";" \n
+                         "{" \n
+                         "	if(_x isKindOf ""LocationArea_F"") then{" \n
+                         "		{" \n
+                         "			if(_x isKindOf ""ModuleSector_F"") then {" \n
+                         "				_locationDsg = _x getVariable [""designation"", ""No_Desg""];" \n
+                         "				breakTo ""main"";" \n
+                         "			};" \n
+                         "		}forEach (synchronizedObjects _x);" \n
+                         "	};" \n
+                         "}forEach (synchronizedObjects _objective);" \n
+                         "" \n
+                         "if(leader _unit == _unit) then {" \n
+                         "	deleteWaypoint [group _unit, 0];" \n
+                         "	(group _unit) addWaypoint [_objective, 0];" \n
+                         "	(group _unit) setCurrentWaypoint [group _unit, 0];" \n
+                         "};" \n
+                         "" \n
+                         "//diag_log ""****sntwp"";"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Continue">*/
+                                class Continue
+                                {
+                                        itemno = 13;
+                                        priority = 0.000000;
+                                        to="Wait_Time";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Objective_Still_1">*/
+                class Objective_Still_1
+                {
+                        name = "Objective_Still_1";
+                        itemno = 14;
+                        init = /*%FSM<STATEINIT""">*/"_currentObjective = waypointPosition[_group, 0];" \n
+                         "" \n
+                         "_objective = getPos (_group getVariable ""Objective"");" \n
+                         "" \n
+                         "//diag_log format[""### AI output: %1, %2"", _unit, _group getVariable ""Objective""];" \n
+                         "" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Yes">*/
+                                class Yes
+                                {
+                                        itemno = 15;
+                                        priority = 50.000000;
+                                        to="At_Objective_Che";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(_currentObjective distance _objective) < 15"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "No">*/
+                                class No
+                                {
+                                        itemno = 16;
+                                        priority = 25.000000;
+                                        to="Set_New_Task___W";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Combat_Check">*/
+                class Combat_Check
+                {
+                        name = "Combat_Check";
+                        itemno = 17;
+                        init = /*%FSM<STATEINIT""">*/"_behaviour = behaviour _unit;" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "In_combat">*/
+                                class In_combat
+                                {
+                                        itemno = 18;
+                                        priority = 100.000000;
+                                        to="Recently_Moved_into";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_behaviour == ""combat"""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Not_in_Combat">*/
+                                class Not_in_Combat
+                                {
+                                        itemno = 19;
+                                        priority = 0.000000;
+                                        to="Hold";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "At_Objective_Che">*/
+                class At_Objective_Che
+                {
+                        name = "At_Objective_Che";
+                        itemno = 20;
+                        init = /*%FSM<STATEINIT""">*/"_objective = _group getVariable ""objective"";" \n
+                         "//diag_log ""***AOC"";"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Arrived">*/
+                                class Arrived
+                                {
+                                        itemno = 21;
+                                        priority = 100.000000;
+                                        to="Combat_Check";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_unit inArea _objective"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Not_Arrived">*/
+                                class Not_Arrived
+                                {
+                                        itemno = 22;
+                                        priority = 50.000000;
+                                        to="Combat_Check_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Combat_Check_1">*/
+                class Combat_Check_1
+                {
+                        name = "Combat_Check_1";
+                        itemno = 23;
+                        init = /*%FSM<STATEINIT""">*/"_behaviour = behaviour _unit;" \n
+                         "//diag_log format[""### AI output: Not arrived CC %1, %2"", _unit, _group getVariable ""Objective""];" \n
+                         "_wait = diag_tickTime + 5;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "In_combat">*/
+                                class In_combat
+                                {
+                                        itemno = 24;
+                                        priority = 100.000000;
+                                        to="Recently_Moved_";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_behaviour == ""combat"" && ((_unit getVariable ""lastFired"") + 20) > diag_tickTime"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "__Combat__Moving">*/
+                                class __Combat__Moving
+                                {
+                                        itemno = 25;
+                                        priority = 50.000000;
+                                        to="Keep_Moving";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(speed _unit) < 1"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "__Combat_Moving">*/
+                                class __Combat_Moving
+                                {
+                                        itemno = 41;
+                                        priority = 0.000000;
+                                        to="Continue";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Keep_Moving">*/
+                class Keep_Moving
+                {
+                        name = "Keep_Moving";
+                        itemno = 26;
+                        init = /*%FSM<STATEINIT""">*/"_unit setBehaviour ""aware"";" \n
+                         "[_unit, -1] remoteExec [""forceSpeed"", _unit, false];" \n
+                         "[_unit, (waypointPosition [_group, 0])] remoteExec [""doMove"", _unit, false];" \n
+                         "_wait = diag_tickTime + 5;" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Contine">*/
+                                class Contine
+                                {
+                                        itemno = 42;
+                                        priority = 0.000000;
+                                        to="Continue";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Recently_Moved_">*/
+                class Recently_Moved_
+                {
+                        name = "Recently_Moved_";
+                        itemno = 27;
+                        init = /*%FSM<STATEINIT""">*/"_lastMoved = (_unit getVariable [""lastMoved"", 0]);" \n
+                         "//diag_log ""***RMF"";" \n
+                         "_wait = diag_tickTime;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "No">*/
+                                class No
+                                {
+                                        itemno = 29;
+                                        priority = 50.000000;
+                                        to="Force_Move";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"diag_tickTime > (_lastMoved + 15)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Wait">*/
+                                class Wait
+                                {
+                                        itemno = 37;
+                                        priority = 0.000000;
+                                        to="Player_Check";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"diag_tickTime > _wait"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Force_Move">*/
+                class Force_Move
+                {
+                        name = "Force_Move";
+                        itemno = 30;
+                        init = /*%FSM<STATEINIT""">*/"_unit setVariable [""combatMove"", true, true];" \n
+                         "[_unit] remoteExec [""psq_fnc_combatMove"", _unit, false];" \n
+                         "_wait = diag_tickTime;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Script_Done">*/
+                                class Script_Done
+                                {
+                                        itemno = 38;
+                                        priority = 0.000000;
+                                        to="Continue";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(_unit getVariable ""combatMove"")"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Recently_Moved_into">*/
+                class Recently_Moved_into
+                {
+                        name = "Recently_Moved_into";
+                        itemno = 32;
+                        init = /*%FSM<STATEINIT""">*/"_lastCoverMove = (_unit getVariable [""lastCoverMove"", 0]);" \n
+                         "" \n
+                         "_wait = diag_tickTime + 5;" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "No">*/
+                                class No
+                                {
+                                        itemno = 34;
+                                        priority = 50.000000;
+                                        to="Move_to_New_Cove";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"diag_tickTime > (_lastCoverMove + 30)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Wait">*/
+                                class Wait
+                                {
+                                        itemno = 37;
+                                        priority = 0.000000;
+                                        to="Player_Check";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"diag_tickTime > _wait"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Set_New_Task___W">*/
+                class Set_New_Task___W
+                {
+                        name = "Set_New_Task___W";
+                        itemno = 33;
+                        init = /*%FSM<STATEINIT""">*/"_objective = _group getVariable ""objective"";" \n
+                         "_locationDsg = """";" \n
+                         "scopeName ""main"";" \n
+                         "{" \n
+                         "	if(_x isKindOf ""LocationArea_F"") then{" \n
+                         "		{" \n
+                         "			if(_x isKindOf ""ModuleSector_F"") then {" \n
+                         "				_locationDsg = _x getVariable [""designation"", ""No_Desg""];" \n
+                         "				breakTo ""main"";" \n
+                         "			};" \n
+                         "		}forEach (synchronizedObjects _x);" \n
+                         "	};" \n
+                         "}forEach (synchronizedObjects _objective);" \n
+                         "" \n
+                         "if(leader _unit == _unit) then {" \n
+                         "	{deleteWaypoint _x;}forEach (waypoints _group);" \n
+                         "	_group addWaypoint [_objective, 0];" \n
+                         "	_group setCurrentWaypoint [_group, 0];" \n
+                         "};" \n
+                         "" \n
+                         "_wait = diag_tickTime;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Wait">*/
+                                class Wait
+                                {
+                                        itemno = 37;
+                                        priority = 0.000000;
+                                        to="Player_Check";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"diag_tickTime > _wait"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Hold">*/
+                class Hold
+                {
+                        name = "Hold";
+                        itemno = 35;
+                        init = /*%FSM<STATEINIT""">*/"[_unit, -1] remoteExec [""forceSpeed"", _unit, false];" \n
+                         "_wait = diag_tickTime + 5;" \n
+                         "//diag_log format[""### AI output: holding %1, %2"", _unit, _group getVariable ""Objective""];" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Wait">*/
+                                class Wait
+                                {
+                                        itemno = 37;
+                                        priority = 0.000000;
+                                        to="Player_Check";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"diag_tickTime > _wait"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Move_to_New_Cove">*/
+                class Move_to_New_Cove
+                {
+                        name = "Move_to_New_Cove";
+                        itemno = 36;
+                        init = /*%FSM<STATEINIT""">*/"_unit setVariable [""defenseCover"", true, true];" \n
+                         "[_unit] remoteExec [""psq_fnc_defensiveCover"", _unit, false];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Script_Done">*/
+                                class Script_Done
+                                {
+                                        itemno = 43;
+                                        priority = 0.000000;
+                                        to="Continue_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(_unit getVariable ""defenseCover"")"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Continue">*/
+                class Continue
+                {
+                        name = "Continue";
+                        itemno = 39;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Wait">*/
+                                class Wait
+                                {
+                                        itemno = 37;
+                                        priority = 0.000000;
+                                        to="Player_Check";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"diag_tickTime > _wait"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Continue_1">*/
+                class Continue_1
+                {
+                        name = "Continue_1";
+                        itemno = 44;
+                        init = /*%FSM<STATEINIT""">*/"_wait = diag_tickTime + 5;" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Wait">*/
+                                class Wait
+                                {
+                                        itemno = 37;
+                                        priority = 0.000000;
+                                        to="Player_Check";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"diag_tickTime > _wait"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+        };
+        initState="Init";
+        finalStates[] =
+        {
+                "End",
+        };
+};
+/*%FSM</COMPILE>*/

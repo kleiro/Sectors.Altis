@@ -1,0 +1,50 @@
+/*
+ * @Author: MoarRightRudder 
+ * @Date: 2018-03-29 14:09:24 
+ * @Last Modified by: MoarRightRudder
+ * @Last Modified time: 2018-04-01 12:45:53
+ */
+
+
+---ToDo:
+1. Redo aiRespawn using bis_fnc_loadInventory and randomly select units loadout
+
+2. MAKE MOAR LOADOUTS!!!!! :D
+
+---FSM's:
+1. sectorChange - runs when a sector changes sides and then finds all groups assigned to it and selects a new waypoint based on their set behavior, also adds/deletes respawn points for each side
+
+2. unitMove - runs to constantly move ai towards their waypoint, even during combat
+
+3. reEval - runs for each strategic and defense group to determine if they should switch objectives if the current one has not been taken within x amount of time
+
+
+---init functions:
+1. Set parameters
+
+2. Find main bases and capturable sectors, set groups behaviour, spawn the sectorChange and unitMove
+
+
+---regular functions:
+1. Respawn script for finding the correct sector in which to move ai (they'll probably spawn at the original base), a safe place to put them at the sector, and assigns their correct loadout
+
+
+---Aggressive FSM Branch
+1.Find all triggers in front of group (distance between trigger and enemy base is less than distance between group and enemy base)
+2. If there are triggers in front, attack the closest one, if there are not, attack the closest trigger to the rear
+3. If no triggers owned by the enemy exist, move to the trigger closest to the enemy base
+
+---Defensive FSM Branch
+1.Find the closest unowned trigger to the main base and attack it
+2. If there are no unowned triggers, the group will wait at the current trigger for 15 seconds, or as long as a majority of the group's units are in combat mode until selecting the next nearest trigger to the friendly base to attack
+3.If the trigger taken by the enemy was not assigned to the group, and it is closer than the trigger the group is moving to, then attack the trigger freshly taken by the enemy
+
+--Strategic FSM Branch
+1.Find out which enemy triggers enemy groups are closest to
+2. Select the enemy trigger with the lowest enemy presence and is closest
+
+60/40 split is .918
+70/30 split is .808
+85/15 split is .551
+90/10 split is .390
+95/5 split is .08

@@ -1,0 +1,295 @@
+/*%FSM<COMPILE "F:\Steam\steamapps\common\Arma 3 Tools\FSMEditor\scriptedFSM.cfg, reEval">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"Init",0,250,277.162445,-1392.911743,367.162445,-1342.911743,0.000000,"Init"};
+item1[] = {"Strat____Def",4,218,277.162384,-1462.208130,367.162384,-1412.208130,50.000000,"Strat || Def"};
+item2[] = {"__Strat_Def",8,218,277.128876,-1316.847778,367.128876,-1266.847778,0.000000,"!Strat/Def"};
+item3[] = {"End",1,250,277.128540,-1237.045044,367.128571,-1187.045044,0.000000,"End"};
+item4[] = {"Current_Objectiv",2,250,276.794312,-1655.023438,366.794312,-1605.023438,0.000000,"Current" \n "Objective"};
+item5[] = {"Wait",4,218,275.644928,-1722.212280,365.644928,-1672.212280,0.000000,"Wait"};
+item6[] = {"Continue",2,250,274.833710,-1787.921631,364.833740,-1737.921631,0.000000,"Continue"};
+item7[] = {"Def_Same",4,218,366.055420,-1827.233154,456.055481,-1777.233154,101.000000,"Def Same"};
+item8[] = {"New_Objective",8,218,151.527206,-1722.212158,241.527222,-1672.212158,0.000000,"New" \n "Objective"};
+item9[] = {"Strat_Same",4,218,366.796417,-1888.741699,456.796448,-1838.741699,100.000000,"Strat Same"};
+item10[] = {"Assign_New_Objec",2,250,496.955933,-1888.026489,586.955933,-1838.026489,0.000000,"Assign" \n "New" \n "Objective"};
+item11[] = {"Assign_New_Objec_1",2,250,496.758667,-1826.640625,586.758667,-1776.640625,0.000000,"Assign" \n "New" \n "Objective"};
+item12[] = {"Continue",8,218,614.109009,-1858.694214,704.109009,-1808.694214,0.000000,"Continue"};
+item13[] = {"",7,210,574.188782,-1634.088379,582.188782,-1626.088379,0.000000,""};
+item14[] = {"Continue_1",2,250,277.036011,-1528.084473,367.036041,-1478.084351,0.000000,"Continue"};
+item15[] = {"Objective_Assign",4,4314,276.764557,-1592.361572,366.764557,-1542.361572,0.000000,"Objective" \n "Assigned"};
+link0[] = {0,1};
+link1[] = {0,2};
+link2[] = {1,14};
+link3[] = {2,3};
+link4[] = {4,5};
+link5[] = {5,6};
+link6[] = {6,7};
+link7[] = {6,8};
+link8[] = {6,9};
+link9[] = {7,11};
+link10[] = {8,4};
+link11[] = {9,10};
+link12[] = {10,12};
+link13[] = {11,12};
+link14[] = {12,13};
+link15[] = {13,4};
+link16[] = {14,15};
+link17[] = {15,4};
+globals[] = {0.000000,0,0,0,0,640,480,3,17,6316128,1,-64.514740,941.914917,-983.852295,-1960.328857,672,652,1};
+window[] = {0,-1,-1,-1,-1,1022,-1878,-88,198,1,690};
+*//*%FSM</HEAD>*/
+class FSM
+{
+        fsmName = "reEval";
+        class States
+        {
+                /*%FSM<STATE "Init">*/
+                class Init
+                {
+                        name = "Init";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/"params[""_group"", ""_objective"",""_behaviour""];" \n
+                         "_behaviour = _group getVariable ""behaviour"";"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Strat____Def">*/
+                                class Strat____Def
+                                {
+                                        itemno = 1;
+                                        priority = 50.000000;
+                                        to="Continue_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_behaviour == ""strat"" || {_behaviour == ""def""}"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "__Strat_Def">*/
+                                class __Strat_Def
+                                {
+                                        itemno = 2;
+                                        priority = 0.000000;
+                                        to="End";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "End">*/
+                class End
+                {
+                        name = "End";
+                        itemno = 3;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Current_Objectiv">*/
+                class Current_Objectiv
+                {
+                        name = "Current_Objectiv";
+                        itemno = 4;
+                        init = /*%FSM<STATEINIT""">*/"_objective = _group getVariable ""Objective"";" \n
+                         "_waitAdded = 150 + (((leader _group) distance _objective)*.3) + (random 180);" \n
+                         "_wait = diag_tickTime + _waitAdded;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Wait">*/
+                                class Wait
+                                {
+                                        itemno = 5;
+                                        priority = 0.000000;
+                                        to="Continue";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"diag_tickTime > _wait"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Continue">*/
+                class Continue
+                {
+                        name = "Continue";
+                        itemno = 6;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Def_Same">*/
+                                class Def_Same
+                                {
+                                        itemno = 7;
+                                        priority = 101.000000;
+                                        to="Assign_New_Objec_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(_objective == (_group getVariable ""objective"")) && {_behaviour == ""def""} && {(floor random [0, .808, 2]) == 0}"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Strat_Same">*/
+                                class Strat_Same
+                                {
+                                        itemno = 9;
+                                        priority = 100.000000;
+                                        to="Assign_New_Objec";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(_objective == (_group getVariable ""objective"")) && {_behaviour == ""strat""} && {(floor random [0, .390, 2]) == 0}"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "New_Objective">*/
+                                class New_Objective
+                                {
+                                        itemno = 8;
+                                        priority = 0.000000;
+                                        to="Current_Objectiv";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Assign_New_Objec">*/
+                class Assign_New_Objec
+                {
+                        name = "Assign_New_Objec";
+                        itemno = 10;
+                        init = /*%FSM<STATEINIT""">*/"//Make an array to track [trigger, friendly groups assigned, #of enemies near]" \n
+                         "_enemyTriggers = [];" \n
+                         "{" \n
+                         "	if(_x getVariable ""owner"" != str(side _group) && _x != _objective) then {" \n
+                         "		_enemyTriggers pushBack [_x , 0, 0];" \n
+                         "	};" \n
+                         "}forEach (missionNamespace getVariable ""triggers"");" \n
+                         "" \n
+                         "//Find the number of groups assigned to each objective" \n
+                         "{" \n
+                         "	if(side _x == (side _group) && _x != _group) then {" \n
+                         "		_trig = _x getVariable ""objective"";" \n
+                         "		{" \n
+                         "			if(_trig in _x) then {" \n
+                         "				_x set [1, (_x select 1) + 1];" \n
+                         "			};" \n
+                         "		}forEach _enemyTriggers;" \n
+                         "	};" \n
+                         "" \n
+                         "}forEach allGroups;" \n
+                         "" \n
+                         "//For each unit on the enemy team, find out which trigger they are closest to" \n
+                         "{" \n
+                         "	_unit = _x;" \n
+                         "" \n
+                         "	if(side _unit != (side _group)) then {" \n
+                         "		_trig = ([_enemyTriggers, [], {(_x select 0) distance _unit}, ""ascend"", {true}] call bis_fnc_sortBy) select 0;" \n
+                         "		{" \n
+                         "			if(_trig in _x) then {" \n
+                         "				_x set [2, (_x select 2) + 1];" \n
+                         "			};" \n
+                         "		}forEach _enemyTriggers;" \n
+                         "	};" \n
+                         "" \n
+                         "}forEach allUnits;" \n
+                         "" \n
+                         "//Assign a weighted score to each trigger according to distance from the group leader, how many groups are assigned, and how many enemies it has near it" \n
+                         "_computations = [];" \n
+                         "{" \n
+                         "	_computations pushBack (((leader _group) distance (_x select 0))^2 + ((_x select 1) + 3)^10 + (_x select 2)^10);" \n
+                         "}forEach _enemyTriggers;" \n
+                         "" \n
+                         "//Select the lowest weighted score and assign the new objective to the group" \n
+                         "_group setVariable[""objective"", (_enemyTriggers select (_computations find (selectMin _computations))) select 0, true];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Continue">*/
+                                class Continue
+                                {
+                                        itemno = 12;
+                                        priority = 0.000000;
+                                        to="Current_Objectiv";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Assign_New_Objec_1">*/
+                class Assign_New_Objec_1
+                {
+                        name = "Assign_New_Objec_1";
+                        itemno = 11;
+                        init = /*%FSM<STATEINIT""">*/"_enemyTriggers = [];" \n
+                         "{" \n
+                         "	if(_x getVariable ""owner"" != str(side _group) && _x != _objective) then {" \n
+                         "		_enemyTriggers pushBack _x;" \n
+                         "	};" \n
+                         "}forEach (missionNamespace getVariable ""triggers"");" \n
+                         "" \n
+                         "_base = switch (side _group) do {" \n
+                         "	case (west):{""bluBase""};" \n
+                         "	case (east):{""redBase""};" \n
+                         "};" \n
+                         "" \n
+                         "_objective = [_enemyTriggers, [], {_x distance (getMarkerPos _base)}, ""ascend"", {true}] call bis_fnc_sortBy;" \n
+                         "_group setVariable[""objective"", _objective select 0, true];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Continue">*/
+                                class Continue
+                                {
+                                        itemno = 12;
+                                        priority = 0.000000;
+                                        to="Current_Objectiv";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Continue_1">*/
+                class Continue_1
+                {
+                        name = "Continue_1";
+                        itemno = 14;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Objective_Assign">*/
+                                class Objective_Assign
+                                {
+                                        itemno = 15;
+                                        priority = 0.000000;
+                                        to="Current_Objectiv";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!isNil {_group getVariable [""objective"", nil]}"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+        };
+        initState="Init";
+        finalStates[] =
+        {
+                "End",
+        };
+};
+/*%FSM</COMPILE>*/

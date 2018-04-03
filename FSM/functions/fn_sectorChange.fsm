@@ -1,0 +1,1926 @@
+/*%FSM<COMPILE "F:\Steam\steamapps\common\Arma 3 Tools\FSMEditor\scriptedFSM.cfg, sectorChange">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"Init",0,250,-64.127319,269.777924,25.872681,319.777924,0.000000,"Init"};
+item1[] = {"Inital__Assignme",4,218,76.661530,269.416321,166.661530,319.416321,101.000000,"Inital " \n "Assignments"};
+item2[] = {"Gather_Groups",2,250,221.243011,269.465759,311.243011,319.465759,0.000000,"Gather Groups"};
+item3[] = {"West_New_Owner_",4,218,-143.830811,67.626793,-53.830811,117.626793,20.000000,"West" \n "New Owner" \n ""};
+item4[] = {"Adjust_Respawns",2,250,-239.860031,-52.129776,-149.859879,-2.129776,0.000000,"Adjust" \n "Respawns"};
+item5[] = {"East__New_Owner",4,218,6.817566,66.510880,96.817566,116.510880,10.000000,"East " \n "New Owner" \n ""};
+item6[] = {"Adjust_Respawns_1",2,250,100.493652,-54.361618,190.493820,-4.361618,0.000000,"Adjust" \n "Respawns"};
+item7[] = {"Continue",8,218,-66.905624,11.365173,23.094376,61.365173,0.000000,"Continue"};
+item8[] = {"Gather_Groups_1",2,250,-67.061981,-73.711487,22.938034,-23.711487,0.000000,"Gather Groups"};
+item9[] = {"Continue",8,218,-66.604866,-158.933167,23.395142,-108.933151,0.000000,"Continue"};
+item10[] = {"Count_Groups",2,250,-66.212952,-236.337860,23.787064,-186.337860,0.000000,"Count" \n "Groups"};
+item11[] = {"Loop",4,218,-65.968422,-842.444824,24.031570,-792.444824,100.000000,"Loop"};
+item12[] = {"End_Loop",8,218,-209.616272,-207.107361,-119.616272,-157.107361,1.000000,"End Loop"};
+item13[] = {"End",1,250,-210.276764,-132.146942,-120.276733,-82.146957,0.000000,"End"};
+item14[] = {"Group_to_Loop",2,250,-65.950562,-914.530029,24.049454,-864.530029,0.000000,"Group to" \n "Loop"};
+item15[] = {"West_Group",4,218,-178.687256,-982.387817,-88.687256,-932.387695,1.000000,"West" \n "Group"};
+item16[] = {"East_Group",4,218,53.350037,-981.634399,143.350037,-931.634277,0.000000,"East" \n "Group"};
+item17[] = {"Get_Behaviour",2,250,-313.780884,-981.390015,-223.780853,-931.389771,0.000000,"Get" \n "Behaviour"};
+item18[] = {"Get_Behaviour_1",2,250,187.770020,-982.259399,277.770050,-932.259277,0.000000,"Get" \n "Behaviour"};
+item19[] = {"Aggressive",4,218,-195.776581,-900.854004,-105.776581,-850.854004,30.000000,"Aggressive"};
+item20[] = {"Defensive",4,218,-664.462341,-944.705688,-574.462341,-894.705566,40.000000,"Defensive"};
+item21[] = {"Strategic",4,218,-470.913391,-909.753418,-380.913391,-859.753418,20.000000,"Strategic"};
+item22[] = {"Aggressive",4,218,56.098282,-901.506897,146.098267,-851.506897,30.000000,"Aggressive"};
+item23[] = {"Defensive_BackTr",4,218,-304.985016,-900.812988,-214.985016,-850.812622,50.000000,"Defensive" \n "BackTrack"};
+item24[] = {"Defensive",4,218,460.050476,-948.721497,550.050476,-898.721191,40.000000,"Defensive"};
+item25[] = {"Set_Objective",2,250,-189.490082,-696.064087,-99.490082,-646.064148,0.000000,"Set Objective"};
+item26[] = {"Get_Triggers",2,250,-872.216919,-872.733154,-782.216919,-822.733032,0.000000,"Get" \n "Triggers"};
+item27[] = {"Unowned_Triggers",4,218,-1010.002686,-772.731812,-920.002747,-722.731689,10.000000,"Unowned" \n "Triggers"};
+item28[] = {"Enemy_Triggers",4,218,-1130.492920,-769.665833,-1040.493164,-719.665771,5.000000,"Enemy Triggers"};
+item29[] = {"No_Triggers",8,218,-893.835999,-772.378052,-803.835999,-722.378052,0.000000,"No" \n "Triggers"};
+item30[] = {"Set_Objective_1",2,250,-1006.372620,-698.378845,-916.372620,-648.378601,0.000000,"Set Objective"};
+item31[] = {"Time__to_Wait",2,250,-1141.292969,-688.028748,-1051.292969,-638.028748,0.000000,"Time " \n "to" \n "Wait"};
+item32[] = {"Wait",4,218,-1105.415283,-609.201294,-1015.414978,-559.201233,0.000000,"Wait"};
+item33[] = {"Units_in__Combat",2,250,-1212.410645,-608.480896,-1122.410889,-558.480835,0.000000,"Units in " \n "Combat"};
+item34[] = {"Units_Engaged",4,218,-1242.525879,-687.407288,-1152.525879,-637.407288,50.000000,"Units" \n "Engaged"};
+item35[] = {"Units_Free",8,218,-1126.748535,-527.527344,-1036.748535,-477.527466,0.000000,"Units" \n "Free"};
+item36[] = {"Set_Objective_2",2,250,-1013.186096,-561.305725,-923.186218,-511.305420,0.000000,"Set Objective"};
+item37[] = {"Set_Objective_3",2,250,-886.178833,-697.542236,-796.178833,-647.542236,0.000000,"Set Objective"};
+item38[] = {"Compute_Distance",2,250,-309.652954,-815.919617,-219.652649,-765.919556,0.000000,"Compute" \n "Distances"};
+item39[] = {"Continue",8,218,-305.900116,-361.682983,-215.900024,-311.682953,0.000000,"Continue"};
+item40[] = {"Backtrack",4,218,-423.031067,-772.440430,-333.030334,-722.440186,10.000000,"Backtrack"};
+item41[] = {"SetObjective",2,250,-420.223022,-697.616699,-330.222656,-647.616272,0.000000,"SetObjective"};
+item42[] = {"Gather_Intel__on",2,250,-630.007629,-834.783081,-540.007629,-784.783020,0.000000,"Gather Intel " \n "on " \n "Enemy"};
+item43[] = {"Unowned_Triggers",4,218,-562.668030,-772.312378,-472.668030,-722.312256,10.000000,"Unowned" \n "Triggers"};
+item44[] = {"Set_Objective_4",2,250,-560.928833,-698.586731,-470.928833,-648.586548,0.000000,"Set Objective"};
+item45[] = {"Enemy_Triggers",4,218,-673.544983,-773.496582,-583.544983,-723.496521,5.000000,"Enemy Triggers"};
+item46[] = {"Set_Objective_5",2,250,-672.819214,-699.050781,-582.819214,-649.050781,0.000000,"Set Objective"};
+item47[] = {"Delete_Group_From",2,250,-306.115692,-268.614105,-216.115692,-218.614105,0.000000,"Delete Group" \n "From Affected" \n "Groups Array"};
+item48[] = {"Continue",8,218,-186.030090,-270.483032,-96.029999,-220.483002,0.000000,"Continue"};
+item49[] = {"Strategic",4,218,304.879822,-905.647400,394.879822,-855.647400,20.000000,"Strategic"};
+item50[] = {"Defensive_BackTr",4,4314,176.736115,-902.413879,266.736115,-852.413513,50.000000,"Defensive" \n "BackTrack"};
+item51[] = {"Set_Objective_6",2,250,58.137222,-695.018005,148.137207,-645.018066,0.000000,"Set Objective"};
+item52[] = {"Get_Triggers_1",2,250,762.686523,-871.957764,852.686523,-821.957642,0.000000,"Get" \n "Triggers"};
+item53[] = {"Unowned_Triggers",4,218,802.430298,-772.965576,892.430298,-722.965454,10.000000,"Unowned" \n "Triggers"};
+item54[] = {"Enemy_Triggers",4,218,929.104919,-781.744568,1019.104919,-731.744446,5.000000,"Enemy Triggers"};
+item55[] = {"No_Triggers",8,218,682.487549,-771.822144,772.487610,-721.822266,0.000000,"No" \n "Triggers"};
+item56[] = {"Set_Objective_7",2,250,806.060425,-698.612671,896.060425,-648.612427,0.000000,"Set Objective"};
+item57[] = {"Time__to_Wait_1",2,250,918.304871,-700.107483,1008.304810,-650.107483,0.000000,"Time " \n "to" \n "Wait"};
+item58[] = {"Wait",4,218,922.106812,-633.714111,1012.106812,-583.714050,0.000000,"Wait"};
+item59[] = {"Units_in__Combat_1",2,250,1027.473633,-632.766235,1117.472900,-582.766235,0.000000,"Units in " \n "Combat"};
+item60[] = {"Units_Engaged",4,218,1025.849854,-698.049805,1115.850342,-648.049927,50.000000,"Units" \n "Engaged"};
+item61[] = {"Units_Free",8,218,926.151489,-566.829895,1016.151489,-516.830078,0.000000,"Units" \n "Free"};
+item62[] = {"Set_Objective_8",2,250,816.872314,-567.263306,906.872192,-517.263062,0.000000,"Set Objective"};
+item63[] = {"Set_Objective_9",2,250,690.144714,-696.986328,780.144775,-646.986389,0.000000,"Set Objective"};
+item64[] = {"Compute_Distance_1",2,250,178.724701,-832.830322,268.724945,-782.830200,0.000000,"Compute" \n "Distances"};
+item65[] = {"Continue",8,218,173.222504,-369.859009,263.222626,-319.859009,0.000000,"Continue"};
+item66[] = {"Backtrack",4,218,265.933105,-769.773010,355.933838,-719.772766,10.000000,"Backtrack"};
+item67[] = {"SetObjective_1",2,250,268.741211,-694.949402,358.741455,-644.948914,0.000000,"SetObjective"};
+item68[] = {"Gather_Intel__on_1",2,250,408.012024,-844.260498,498.012024,-794.260376,0.000000,"Gather Intel " \n "on " \n "Enemy"};
+item69[] = {"Unowned_Triggers",4,218,381.625366,-769.543579,471.625366,-719.543457,10.000000,"Unowned" \n "Triggers"};
+item70[] = {"Set_Objective_10",2,250,383.364624,-695.817993,473.364624,-645.817749,0.000000,"Set Objective"};
+item71[] = {"Enemy_Triggers",4,218,491.084412,-770.042542,581.084351,-720.042419,5.000000,"Enemy Triggers"};
+item72[] = {"Set_Objective_11",2,250,491.810120,-695.596741,581.810181,-645.596741,0.000000,"Set Objective"};
+item73[] = {"Delete_Group_From_1",2,250,173.006927,-276.790161,263.006927,-226.790161,0.000000,"Delete Group" \n "From Affected" \n "Groups Array"};
+item74[] = {"Continue",8,218,58.250885,-278.390839,148.251038,-228.390839,0.000000,"Continue"};
+item75[] = {"Sector_Changed",4,218,-64.910767,194.902115,25.089233,244.902115,50.000000,"Sector" \n "Changed"};
+item76[] = {"Identify_Trigger",2,250,-64.310120,125.228851,25.689896,175.228851,0.000000,"Identify" \n "Trigger"};
+item77[] = {"Continue",8,218,342.624451,269.255341,432.624451,319.255341,0.000000,"Continue"};
+item78[] = {"Count_Groups_1",2,250,463.336670,267.763397,553.336670,317.763397,0.000000,"Count Groups"};
+item79[] = {"Loop",4,218,604.610535,268.471405,694.610535,318.471405,20.000000,"Loop"};
+item80[] = {"End_Loop",8,218,462.933563,342.481964,552.933594,392.481934,0.000000,"End Loop"};
+item81[] = {"End_1",1,250,462.273071,417.442383,552.273071,467.442383,0.000000,"End"};
+item82[] = {"West_Aggressive",4,218,696.455994,151.143753,786.455994,201.143768,40.000000,"West" \n "Aggressive"};
+item83[] = {"West_Defensive",4,218,596.191040,205.002045,686.191101,255.002167,60.000000,"West" \n "Defensive"};
+item84[] = {"West_Strategic",4,218,645.214478,178.423126,735.214539,228.423172,50.000000,"West" \n "Strategic"};
+item85[] = {"Continue",8,218,463.002991,-23.826782,553.003113,26.173218,0.000000,"Continue"};
+item86[] = {"Delete_Group_From_2",2,250,462.787354,69.242081,552.787415,119.242088,0.000000,"Delete Group" \n "From Affected" \n "Groups Array"};
+item87[] = {"Continue",8,218,462.526001,159.773926,552.526184,209.773926,0.000000,"Continue"};
+item88[] = {"Set_Initial_Obje",2,250,593.345032,118.972420,683.345032,168.972412,0.000000,"Set Initial" \n "Objective"};
+item89[] = {"Select_Group",2,250,740.259216,267.357513,830.259216,317.357513,0.000000,"Select Group"};
+item90[] = {"Set_Initial_Obje_1",2,250,703.848328,85.234787,793.848328,135.234772,0.000000,"Set Initial" \n "Objective"};
+item91[] = {"East_Aggressive",4,218,900.649414,202.817200,990.649414,252.817230,10.000000,"East" \n "Aggressive"};
+item92[] = {"East_Defensive",4,218,801.217957,149.994843,891.218018,199.994965,30.000000,"East" \n "Defensive"};
+item93[] = {"East_Strategic",4,218,851.074890,175.089355,941.074951,225.089386,20.000000,"East" \n "Strategic"};
+item94[] = {"Set_Initial_Obje_2",2,250,922.210388,7.724609,1012.210388,57.724594,0.000000,"Set Initial" \n "Objective"};
+item95[] = {"Set_Initial_Obje_3",2,250,812.540405,54.797340,902.540405,104.797333,0.000000,"Set Initial" \n "Objective"};
+item96[] = {"NA",8,218,-196.903717,268.863525,-106.903717,318.863525,10.000000,"NA"};
+item97[] = {"End_2",1,250,-318.153748,269.688324,-228.153717,319.688324,0.000000,"End"};
+item98[] = {"No_Triggers",8,218,-779.931702,-773.221741,-689.931702,-723.221741,0.000000,"No" \n "Triggers"};
+item99[] = {"Set_Objective_12",2,250,-772.274536,-698.385925,-682.274536,-648.385925,0.000000,"Set Objective"};
+item100[] = {"No_Triggers",8,218,586.616211,-771.822083,676.616272,-721.822205,0.000000,"No" \n "Triggers"};
+item101[] = {"Set_Objective_13",2,250,594.273376,-696.986267,684.273438,-646.986328,0.000000,"Set Objective"};
+link0[] = {0,1};
+link1[] = {0,75};
+link2[] = {0,96};
+link3[] = {1,2};
+link4[] = {2,77};
+link5[] = {3,4};
+link6[] = {4,7};
+link7[] = {5,6};
+link8[] = {6,7};
+link9[] = {7,8};
+link10[] = {8,9};
+link11[] = {9,10};
+link12[] = {10,11};
+link13[] = {10,12};
+link14[] = {11,14};
+link15[] = {12,13};
+link16[] = {14,15};
+link17[] = {14,16};
+link18[] = {15,17};
+link19[] = {16,18};
+link20[] = {17,19};
+link21[] = {17,20};
+link22[] = {17,21};
+link23[] = {17,23};
+link24[] = {18,22};
+link25[] = {18,24};
+link26[] = {18,49};
+link27[] = {18,50};
+link28[] = {19,25};
+link29[] = {20,26};
+link30[] = {21,42};
+link31[] = {22,51};
+link32[] = {23,38};
+link33[] = {24,52};
+link34[] = {25,39};
+link35[] = {26,27};
+link36[] = {26,28};
+link37[] = {26,29};
+link38[] = {27,30};
+link39[] = {28,31};
+link40[] = {29,37};
+link41[] = {30,39};
+link42[] = {31,32};
+link43[] = {32,33};
+link44[] = {33,34};
+link45[] = {33,35};
+link46[] = {34,31};
+link47[] = {35,36};
+link48[] = {36,39};
+link49[] = {37,39};
+link50[] = {38,39};
+link51[] = {38,40};
+link52[] = {39,47};
+link53[] = {40,41};
+link54[] = {41,39};
+link55[] = {42,43};
+link56[] = {42,45};
+link57[] = {42,98};
+link58[] = {43,44};
+link59[] = {44,39};
+link60[] = {45,46};
+link61[] = {46,39};
+link62[] = {47,48};
+link63[] = {48,10};
+link64[] = {49,68};
+link65[] = {50,64};
+link66[] = {51,65};
+link67[] = {52,53};
+link68[] = {52,54};
+link69[] = {52,55};
+link70[] = {53,56};
+link71[] = {54,57};
+link72[] = {55,63};
+link73[] = {56,65};
+link74[] = {57,58};
+link75[] = {58,59};
+link76[] = {59,60};
+link77[] = {59,61};
+link78[] = {60,57};
+link79[] = {61,62};
+link80[] = {62,65};
+link81[] = {63,65};
+link82[] = {64,65};
+link83[] = {64,66};
+link84[] = {65,73};
+link85[] = {66,67};
+link86[] = {67,65};
+link87[] = {68,69};
+link88[] = {68,71};
+link89[] = {68,100};
+link90[] = {69,70};
+link91[] = {70,65};
+link92[] = {71,72};
+link93[] = {72,65};
+link94[] = {73,74};
+link95[] = {74,10};
+link96[] = {75,76};
+link97[] = {76,3};
+link98[] = {76,5};
+link99[] = {76,96};
+link100[] = {77,78};
+link101[] = {78,79};
+link102[] = {78,80};
+link103[] = {79,89};
+link104[] = {80,81};
+link105[] = {82,90};
+link106[] = {83,88};
+link107[] = {84,90};
+link108[] = {85,86};
+link109[] = {86,87};
+link110[] = {87,78};
+link111[] = {88,85};
+link112[] = {89,82};
+link113[] = {89,83};
+link114[] = {89,84};
+link115[] = {89,91};
+link116[] = {89,92};
+link117[] = {89,93};
+link118[] = {90,85};
+link119[] = {91,94};
+link120[] = {92,95};
+link121[] = {93,94};
+link122[] = {94,85};
+link123[] = {95,85};
+link124[] = {96,97};
+link125[] = {98,99};
+link126[] = {99,39};
+link127[] = {100,101};
+link128[] = {101,65};
+globals[] = {0.000000,0,0,0,0,640,480,3,159,6316128,1,-426.984741,369.101624,-305.627563,-1023.392517,742,669,1};
+window[] = {0,-1,-1,-1,-1,971,-1790,-67,130,1,760};
+*//*%FSM</HEAD>*/
+class FSM
+{
+        fsmName = "sectorChange";
+        class States
+        {
+                /*%FSM<STATE "Init">*/
+                class Init
+                {
+                        name = "Init";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/"params [""_sector"", ""_side"",""_trigger""];" \n
+                         "" \n
+                         "//diag_log format[""@@@SectorChange Running %1, %2"", _sector, _side];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Inital__Assignme">*/
+                                class Inital__Assignme
+                                {
+                                        itemno = 1;
+                                        priority = 101.000000;
+                                        to="Gather_Groups";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(missionNamespace getVariable [""initialObj"", false]) && {(typeName _sector) == ""STRING""}"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Sector_Changed">*/
+                                class Sector_Changed
+                                {
+                                        itemno = 75;
+                                        priority = 50.000000;
+                                        to="Identify_Trigger";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(missionNamespace getVariable [""initialObj"", false])"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "NA">*/
+                                class NA
+                                {
+                                        itemno = 96;
+                                        priority = 10.000000;
+                                        to="End_2";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Gather_Groups">*/
+                class Gather_Groups
+                {
+                        name = "Gather_Groups";
+                        itemno = 2;
+                        init = /*%FSM<STATEINIT""">*/"params[""_groups""];" \n
+                         "_groups = allGroups;" \n
+                         "" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Continue">*/
+                                class Continue
+                                {
+                                        itemno = 77;
+                                        priority = 0.000000;
+                                        to="Count_Groups_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Adjust_Respawns">*/
+                class Adjust_Respawns
+                {
+                        name = "Adjust_Respawns";
+                        itemno = 4;
+                        init = /*%FSM<STATEINIT""">*/"_oldRes = _trigger getVariable [""spawn"", []];" \n
+                         "if(!(_oldRes isEqualTo [])) then {" \n
+                         "	_oldRes call bis_fnc_removeRespawnPosition;" \n
+                         "};" \n
+                         "" \n
+                         "_newRes = [west, (getPos _trigger)] call BIS_fnc_addRespawnPosition;" \n
+                         "_trigger setVariable [""spawn"", _newRes];" \n
+                         "_trigger setVariable [""owner"", ""west""];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Continue">*/
+                                class Continue
+                                {
+                                        itemno = 7;
+                                        priority = 0.000000;
+                                        to="Gather_Groups_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Adjust_Respawns_1">*/
+                class Adjust_Respawns_1
+                {
+                        name = "Adjust_Respawns_1";
+                        itemno = 6;
+                        init = /*%FSM<STATEINIT""">*/"_oldRes = _trigger getVariable [""spawn"", []];" \n
+                         "if(!(_oldRes isEqualTo [])) then {" \n
+                         "	_oldRes call bis_fnc_removeRespawnPosition;" \n
+                         "};" \n
+                         "" \n
+                         "_newRes = [east, (getPos _trigger)] call BIS_fnc_addRespawnPosition;" \n
+                         "_trigger setVariable [""spawn"", _newRes];" \n
+                         "_trigger setVariable [""owner"", ""east""];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Continue">*/
+                                class Continue
+                                {
+                                        itemno = 7;
+                                        priority = 0.000000;
+                                        to="Gather_Groups_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Gather_Groups_1">*/
+                class Gather_Groups_1
+                {
+                        name = "Gather_Groups_1";
+                        itemno = 8;
+                        init = /*%FSM<STATEINIT""">*/"_affectedGroups = [];" \n
+                         "{" \n
+                         "	_group = _x;" \n
+                         "	_obj = _group getVariable ""Objective"";" \n
+                         "	if(_obj isEqualTo _trigger || (_group getVariable ""Behaviour"") == ""def"") then {" \n
+                         "		_affectedGroups pushback _group;" \n
+                         "	};" \n
+                         "}forEach allGroups;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Continue">*/
+                                class Continue
+                                {
+                                        itemno = 9;
+                                        priority = 0.000000;
+                                        to="Count_Groups";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Count_Groups">*/
+                class Count_Groups
+                {
+                        name = "Count_Groups";
+                        itemno = 10;
+                        init = /*%FSM<STATEINIT""">*/"_agCount = count _affectedGroups;" \n
+                         "//diag_log format[""@@@SectorChange OUTPUT: affected groups %1, %2"", _affectedGroups];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Loop">*/
+                                class Loop
+                                {
+                                        itemno = 11;
+                                        priority = 100.000000;
+                                        to="Group_to_Loop";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_agCount > 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "End_Loop">*/
+                                class End_Loop
+                                {
+                                        itemno = 12;
+                                        priority = 1.000000;
+                                        to="End";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "End">*/
+                class End
+                {
+                        name = "End";
+                        itemno = 13;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Group_to_Loop">*/
+                class Group_to_Loop
+                {
+                        name = "Group_to_Loop";
+                        itemno = 14;
+                        init = /*%FSM<STATEINIT""">*/"_group = _affectedGroups select 0;" \n
+                         "_behaviour = _group getVariable ""behaviour"";" \n
+                         "_obj = _group getVariable ""objective"";" \n
+                         "//diag_log format[""@@@SectorChange OUTPUT: loopingGroup - %1, %2"", _group, _behaviour];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "West_Group">*/
+                                class West_Group
+                                {
+                                        itemno = 15;
+                                        priority = 1.000000;
+                                        to="Get_Behaviour";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"side _group == west"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "East_Group">*/
+                                class East_Group
+                                {
+                                        itemno = 16;
+                                        priority = 0.000000;
+                                        to="Get_Behaviour_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"side _group == east"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Get_Behaviour">*/
+                class Get_Behaviour
+                {
+                        name = "Get_Behaviour";
+                        itemno = 17;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Defensive_BackTr">*/
+                                class Defensive_BackTr
+                                {
+                                        itemno = 23;
+                                        priority = 50.000000;
+                                        to="Compute_Distance";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_behaviour == ""def"" && {_obj != _trigger}"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Defensive">*/
+                                class Defensive
+                                {
+                                        itemno = 20;
+                                        priority = 40.000000;
+                                        to="Get_Triggers";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_behaviour == ""def"""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Aggressive">*/
+                                class Aggressive
+                                {
+                                        itemno = 19;
+                                        priority = 30.000000;
+                                        to="Set_Objective";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_behaviour == ""agg"""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Strategic">*/
+                                class Strategic
+                                {
+                                        itemno = 21;
+                                        priority = 20.000000;
+                                        to="Gather_Intel__on";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_behaviour == ""strat"""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Get_Behaviour_1">*/
+                class Get_Behaviour_1
+                {
+                        name = "Get_Behaviour_1";
+                        itemno = 18;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Defensive_BackTr">*/
+                                class Defensive_BackTr
+                                {
+                                        itemno = 50;
+                                        priority = 50.000000;
+                                        to="Compute_Distance_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_behaviour == ""def"" && {_obj != _trigger}"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Defensive">*/
+                                class Defensive
+                                {
+                                        itemno = 24;
+                                        priority = 40.000000;
+                                        to="Get_Triggers_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_behaviour == ""def"""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Aggressive">*/
+                                class Aggressive
+                                {
+                                        itemno = 22;
+                                        priority = 30.000000;
+                                        to="Set_Objective_6";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_behaviour == ""agg"""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Strategic">*/
+                                class Strategic
+                                {
+                                        itemno = 49;
+                                        priority = 20.000000;
+                                        to="Gather_Intel__on_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_behaviour == ""strat"""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Set_Objective">*/
+                class Set_Objective
+                {
+                        name = "Set_Objective";
+                        itemno = 25;
+                        init = /*%FSM<STATEINIT""">*/"_enemyTriggers = [];" \n
+                         "_frontTriggers = [];" \n
+                         "_backTriggers = [];" \n
+                         "{" \n
+                         "	if(_x getVariable ""owner"" == ""east"" || _x getVariable ""owner"" == ""none"") then {" \n
+                         "		_enemyTriggers pushBack _x;" \n
+                         "	};" \n
+                         "}forEach (missionNamespace getVariable ""triggers"");" \n
+                         "" \n
+                         "{" \n
+                         "	if(_x distance (getMarkerPos ""redBase"") <= (leader _group) distance (getMarkerPos ""redBase"")) then {" \n
+                         "		_frontTriggers pushBack _x;" \n
+                         "	} else {" \n
+                         "		_backTriggers pushBack _x;" \n
+                         "	}" \n
+                         "}forEach _enemyTriggers;" \n
+                         "" \n
+                         "if(count _frontTriggers > 0) then {" \n
+                         "	_frontTriggers = [_frontTriggers, [], {(leader _group) distance _x}, ""ascend"", {true}] call bis_fnc_sortBy;" \n
+                         "	_rand = 1;" \n
+                         "	if(count _frontTriggers > 1) then {_rand = [0, .808, 2];};" \n
+                         "	_group setVariable[""objective"", _frontTriggers select (floor random _rand), true]; " \n
+                         "} else {" \n
+                         "	if(count _backTriggers > 0) then {" \n
+                         "		_backTriggers = [_backTriggers, [], {(leader _group) distance _x}, ""ascend"", {true}] call bis_fnc_sortBy;" \n
+                         "		_group setVariable[""objective"", _backTriggers select 0, true];" \n
+                         "	} else {" \n
+                         "		_objective = [missionNamespace getVariable ""triggers"", [], {_x distance (getMarkerPos ""redBase"")}, ""ascend"", {true}] call bis_fnc_sortBy;" \n
+                         "		_group setVariable[""objective"", _objective select 0, true];" \n
+                         "	};" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Continue">*/
+                                class Continue
+                                {
+                                        itemno = 39;
+                                        priority = 0.000000;
+                                        to="Delete_Group_From";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Get_Triggers">*/
+                class Get_Triggers
+                {
+                        name = "Get_Triggers";
+                        itemno = 26;
+                        init = /*%FSM<STATEINIT""">*/"_enemyTriggers = [];" \n
+                         "_unownedTriggers = [];" \n
+                         "{" \n
+                         "	switch (_x getVariable ""owner"") do {" \n
+                         "		case (""east""): {" \n
+                         "			_enemyTriggers pushBack _x;" \n
+                         "		};" \n
+                         "		case (""none""): {" \n
+                         "			_unownedTriggers pushBack _x;" \n
+                         "		};" \n
+                         "	};" \n
+                         "}forEach (missionNamespace getVariable ""triggers"");"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Unowned_Triggers">*/
+                                class Unowned_Triggers
+                                {
+                                        itemno = 27;
+                                        priority = 10.000000;
+                                        to="Set_Objective_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(count _unownedTriggers) > 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Enemy_Triggers">*/
+                                class Enemy_Triggers
+                                {
+                                        itemno = 28;
+                                        priority = 5.000000;
+                                        to="Time__to_Wait";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(count _enemyTriggers) > 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "No_Triggers">*/
+                                class No_Triggers
+                                {
+                                        itemno = 29;
+                                        priority = 0.000000;
+                                        to="Set_Objective_3";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Set_Objective_1">*/
+                class Set_Objective_1
+                {
+                        name = "Set_Objective_1";
+                        itemno = 30;
+                        init = /*%FSM<STATEINIT""">*/"_objective = [_unownedTriggers, [], {_x distance (getMarkerPos ""bluBase"")}, ""ascend"", {true}] call bis_fnc_sortBy;" \n
+                         "_group setVariable[""objective"", _objective select 0, true];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Continue">*/
+                                class Continue
+                                {
+                                        itemno = 39;
+                                        priority = 0.000000;
+                                        to="Delete_Group_From";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Time__to_Wait">*/
+                class Time__to_Wait
+                {
+                        name = "Time__to_Wait";
+                        itemno = 31;
+                        init = /*%FSM<STATEINIT""">*/"_wait = diag_tickTime + 7;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Wait">*/
+                                class Wait
+                                {
+                                        itemno = 32;
+                                        priority = 0.000000;
+                                        to="Units_in__Combat";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"diag_ticktime > _wait"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Units_in__Combat">*/
+                class Units_in__Combat
+                {
+                        name = "Units_in__Combat";
+                        itemno = 33;
+                        init = /*%FSM<STATEINIT""">*/"_nOfUnits = count (units _group);" \n
+                         "_i = 0;" \n
+                         "{" \n
+                         "	if(((_x getVariable [""lastFired"", 0]) + 15) > diag_tickTime && (_x distance (_group getVariable ""objective"") < 30)) then {" \n
+                         "		_i = _i + 1;" \n
+                         "	};" \n
+                         "}forEach (units _group);" \n
+                         "" \n
+                         "_pct = _i/_nOfUnits;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Units_Engaged">*/
+                                class Units_Engaged
+                                {
+                                        itemno = 34;
+                                        priority = 50.000000;
+                                        to="Time__to_Wait";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_pct > .5"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Units_Free">*/
+                                class Units_Free
+                                {
+                                        itemno = 35;
+                                        priority = 0.000000;
+                                        to="Set_Objective_2";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Set_Objective_2">*/
+                class Set_Objective_2
+                {
+                        name = "Set_Objective_2";
+                        itemno = 36;
+                        init = /*%FSM<STATEINIT""">*/"_objective = [_enemyTriggers, [], {_x distance (getMarkerPos ""bluBase"")}, ""ascend"", {true}] call bis_fnc_sortBy;" \n
+                         "_group setVariable[""objective"", _objective select 0, true];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Continue">*/
+                                class Continue
+                                {
+                                        itemno = 39;
+                                        priority = 0.000000;
+                                        to="Delete_Group_From";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Set_Objective_3">*/
+                class Set_Objective_3
+                {
+                        name = "Set_Objective_3";
+                        itemno = 37;
+                        init = /*%FSM<STATEINIT""">*/"_objective = [missionNamespace getVariable ""triggers"", [], {_x distance (getMarkerPos ""redBase"")}, ""ascend"", {true}] call bis_fnc_sortBy;" \n
+                         "_group setVariable[""objective"", _objective select 1, true];" \n
+                         "diag_log format[""### strat output 3: %1, %2"", _group, _objective];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Continue">*/
+                                class Continue
+                                {
+                                        itemno = 39;
+                                        priority = 0.000000;
+                                        to="Delete_Group_From";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Compute_Distance">*/
+                class Compute_Distance
+                {
+                        name = "Compute_Distance";
+                        itemno = 38;
+                        init = /*%FSM<STATEINIT""">*/"_currentObjDist = _obj distance (leader _group);" \n
+                         "_potentialObjDist = _trigger distance (leader _group);" \n
+                         "_chance = (floor random[0,.390,2]);"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Backtrack">*/
+                                class Backtrack
+                                {
+                                        itemno = 40;
+                                        priority = 10.000000;
+                                        to="SetObjective";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(_currentObjDist > _potentialObjDist) && (_chance == 0)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Continue">*/
+                                class Continue
+                                {
+                                        itemno = 39;
+                                        priority = 0.000000;
+                                        to="Delete_Group_From";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "SetObjective">*/
+                class SetObjective
+                {
+                        name = "SetObjective";
+                        itemno = 41;
+                        init = /*%FSM<STATEINIT""">*/"_group setVariable[""objective"", _trigger, true];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Continue">*/
+                                class Continue
+                                {
+                                        itemno = 39;
+                                        priority = 0.000000;
+                                        to="Delete_Group_From";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Gather_Intel__on">*/
+                class Gather_Intel__on
+                {
+                        name = "Gather_Intel__on";
+                        itemno = 42;
+                        init = /*%FSM<STATEINIT""">*/"_enemyTriggers = [];" \n
+                         "_unownedTriggers = [];" \n
+                         "{" \n
+                         "	if(_x getVariable ""owner"" == ""east"") then {" \n
+                         "		_enemyTriggers pushBack _x;" \n
+                         "	};" \n
+                         "	if(_x getVariable ""owner"" == ""none"") then {" \n
+                         "		_unownedTriggers pushBack _x;" \n
+                         "	};" \n
+                         "}forEach (missionNamespace getVariable ""triggers"");"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Unowned_Triggers">*/
+                                class Unowned_Triggers
+                                {
+                                        itemno = 43;
+                                        priority = 10.000000;
+                                        to="Set_Objective_4";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(count _unownedTriggers) > 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Enemy_Triggers">*/
+                                class Enemy_Triggers
+                                {
+                                        itemno = 45;
+                                        priority = 5.000000;
+                                        to="Set_Objective_5";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(count _enemyTriggers) > 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "No_Triggers">*/
+                                class No_Triggers
+                                {
+                                        itemno = 98;
+                                        priority = 0.000000;
+                                        to="Set_Objective_12";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Set_Objective_4">*/
+                class Set_Objective_4
+                {
+                        name = "Set_Objective_4";
+                        itemno = 44;
+                        init = /*%FSM<STATEINIT""">*/"_unownedTriggers append _enemyTriggers;" \n
+                         "_objective = [_unownedTriggers, [], {_x distance (getMarkerPos ""bluBase"")}, ""ascend"", {true}] call bis_fnc_sortBy;" \n
+                         "_group setVariable[""objective"", _objective select 1, true];" \n
+                         "//diag_log format[""### strat output 1: %1, %2"", _group, _objective];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Continue">*/
+                                class Continue
+                                {
+                                        itemno = 39;
+                                        priority = 0.000000;
+                                        to="Delete_Group_From";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Set_Objective_5">*/
+                class Set_Objective_5
+                {
+                        name = "Set_Objective_5";
+                        itemno = 46;
+                        init = /*%FSM<STATEINIT""">*/"//Make an array to track [trigger, friendly groups assigned, #of enemies near]" \n
+                         "{" \n
+                         "	_enemyTriggers set [_forEachIndex, [_x, 0,0]];" \n
+                         "} forEach _enemyTriggers;" \n
+                         "" \n
+                         "//Find the number of groups assigned to each objective" \n
+                         "{" \n
+                         "	if(side _x == west && _x != _group) then {" \n
+                         "		_trig = _x getVariable ""objective"";" \n
+                         "		{" \n
+                         "			if(_trig in _x) then {" \n
+                         "				_x set [1, (_x select 1) + 1];" \n
+                         "			};" \n
+                         "		}forEach _enemyTriggers;" \n
+                         "	};" \n
+                         "" \n
+                         "}forEach allGroups;" \n
+                         "" \n
+                         "//For each unit on the enemy team, find out which trigger they are closest to" \n
+                         "{" \n
+                         "	_unit = _x;" \n
+                         "" \n
+                         "	if(side _unit == east) then {" \n
+                         "		_trig = ([_enemyTriggers, [], {(_x select 0) distance _unit}, ""ascend"", {true}] call bis_fnc_sortBy) select 0;" \n
+                         "		{" \n
+                         "			if(_trig in _x) then {" \n
+                         "				_x set [2, (_x select 2) + 1];" \n
+                         "			};" \n
+                         "		}forEach _enemyTriggers;" \n
+                         "	};" \n
+                         "" \n
+                         "}forEach allUnits;" \n
+                         "" \n
+                         "//Assign a weighted score to each trigger according to distance from the group leader, how many groups are assigned, and how many enemies it has near it" \n
+                         "_computations = [];" \n
+                         "{" \n
+                         "	_computations pushBack (((leader _group) distance (_x select 0))^2 + ((_x select 1) + 3)^10 + (_x select 2)^10);" \n
+                         "}forEach _enemyTriggers;" \n
+                         "" \n
+                         "//Select the lowest weighted score and assign the new objective to the group" \n
+                         "_group setVariable[""objective"", (_enemyTriggers select (_computations find (selectMin _computations))) select 0, true];" \n
+                         "" \n
+                         "//diag_log format[""### strat output 2: %1, %2"", _group, (_enemyTriggers select (_computations find (selectMin _computations)))];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Continue">*/
+                                class Continue
+                                {
+                                        itemno = 39;
+                                        priority = 0.000000;
+                                        to="Delete_Group_From";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Delete_Group_From">*/
+                class Delete_Group_From
+                {
+                        name = "Delete_Group_From";
+                        itemno = 47;
+                        init = /*%FSM<STATEINIT""">*/"//diag_log format[""@@@SectorChange OUTPUT: deleting group %1"", _group];" \n
+                         "_affectedGroups deleteAt 0;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Continue">*/
+                                class Continue
+                                {
+                                        itemno = 48;
+                                        priority = 0.000000;
+                                        to="Count_Groups";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Set_Objective_6">*/
+                class Set_Objective_6
+                {
+                        name = "Set_Objective_6";
+                        itemno = 51;
+                        init = /*%FSM<STATEINIT""">*/"_enemyTriggers = [];" \n
+                         "_frontTriggers = [];" \n
+                         "_backTriggers = [];" \n
+                         "{" \n
+                         "	if(_x getVariable ""owner"" == ""west"" || _x getVariable ""owner"" == ""none"") then {" \n
+                         "		_enemyTriggers pushBack _x;" \n
+                         "	};" \n
+                         "}forEach (missionNamespace getVariable ""triggers"");" \n
+                         "" \n
+                         "{" \n
+                         "	if(_x distance (getMarkerPos ""bluBase"") <= (leader _group) distance (getMarkerPos ""bluBase"")) then {" \n
+                         "		_frontTriggers pushBack _x;" \n
+                         "	} else {" \n
+                         "		_backTriggers pushBack _x;" \n
+                         "	}" \n
+                         "}forEach _enemyTriggers;" \n
+                         "" \n
+                         "if(count _frontTriggers > 0) then {" \n
+                         "	_frontTriggers = [_frontTriggers, [], {(leader _group) distance _x}, ""ascend"", {true}] call bis_fnc_sortBy;" \n
+                         "	_rand =1;" \n
+                         "	if(count _frontTriggers > 1) then {_rand = [0, .808, 2];};" \n
+                         "	_group setVariable[""objective"", _frontTriggers select (floor random _rand), true]; " \n
+                         "} else {" \n
+                         "	if(count _backTriggers > 0) then {" \n
+                         "		_backTriggers = [_backTriggers, [], {(leader _group) distance _x}, ""ascend"", {true}] call bis_fnc_sortBy;" \n
+                         "		_group setVariable[""objective"", _backTriggers select 0, true];" \n
+                         "	} else {" \n
+                         "		_objective = [missionNamespace getVariable ""triggers"", [], {_x distance (getMarkerPos ""bluBase"")}, ""ascend"", {true}] call bis_fnc_sortBy;" \n
+                         "		_group setVariable[""objective"", _objective select 0, true];" \n
+                         "	};" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Continue">*/
+                                class Continue
+                                {
+                                        itemno = 65;
+                                        priority = 0.000000;
+                                        to="Delete_Group_From_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Get_Triggers_1">*/
+                class Get_Triggers_1
+                {
+                        name = "Get_Triggers_1";
+                        itemno = 52;
+                        init = /*%FSM<STATEINIT""">*/"_enemyTriggers = [];" \n
+                         "_unownedTriggers = [];" \n
+                         "{" \n
+                         "	switch (_x getVariable ""owner"") do {" \n
+                         "		case (""west""): {" \n
+                         "			_enemyTriggers pushBack _x;" \n
+                         "		};" \n
+                         "		case (""none""): {" \n
+                         "			_unownedTriggers pushBack _x;" \n
+                         "		};" \n
+                         "	};" \n
+                         "}forEach (missionNamespace getVariable ""triggers"");"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Unowned_Triggers">*/
+                                class Unowned_Triggers
+                                {
+                                        itemno = 53;
+                                        priority = 10.000000;
+                                        to="Set_Objective_7";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(count _unownedTriggers) > 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Enemy_Triggers">*/
+                                class Enemy_Triggers
+                                {
+                                        itemno = 54;
+                                        priority = 5.000000;
+                                        to="Time__to_Wait_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(count _enemyTriggers) > 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "No_Triggers">*/
+                                class No_Triggers
+                                {
+                                        itemno = 55;
+                                        priority = 0.000000;
+                                        to="Set_Objective_9";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Set_Objective_7">*/
+                class Set_Objective_7
+                {
+                        name = "Set_Objective_7";
+                        itemno = 56;
+                        init = /*%FSM<STATEINIT""">*/"_objective = [_unownedTriggers, [], {_x distance (getMarkerPos ""redBase"")}, ""ascend"", {true}] call bis_fnc_sortBy;" \n
+                         "_group setVariable[""objective"", _objective select 0, true];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Continue">*/
+                                class Continue
+                                {
+                                        itemno = 65;
+                                        priority = 0.000000;
+                                        to="Delete_Group_From_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Time__to_Wait_1">*/
+                class Time__to_Wait_1
+                {
+                        name = "Time__to_Wait_1";
+                        itemno = 57;
+                        init = /*%FSM<STATEINIT""">*/"_wait = diag_tickTime + 7;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Wait">*/
+                                class Wait
+                                {
+                                        itemno = 58;
+                                        priority = 0.000000;
+                                        to="Units_in__Combat_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"diag_ticktime > _wait"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Units_in__Combat_1">*/
+                class Units_in__Combat_1
+                {
+                        name = "Units_in__Combat_1";
+                        itemno = 59;
+                        init = /*%FSM<STATEINIT""">*/"_nOfUnits = count (units _group);" \n
+                         "_i = 0;" \n
+                         "{" \n
+                         "	if(((_x getVariable [""lastFired"", 0]) + 15) > diag_tickTime && (_x distance (_group getVariable ""objective"") < 30)) then {" \n
+                         "		_i = _i + 1;" \n
+                         "	};" \n
+                         "}forEach (units _group);" \n
+                         "" \n
+                         "_pct = _i/_nOfUnits;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Units_Engaged">*/
+                                class Units_Engaged
+                                {
+                                        itemno = 60;
+                                        priority = 50.000000;
+                                        to="Time__to_Wait_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_pct > .5"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Units_Free">*/
+                                class Units_Free
+                                {
+                                        itemno = 61;
+                                        priority = 0.000000;
+                                        to="Set_Objective_8";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Set_Objective_8">*/
+                class Set_Objective_8
+                {
+                        name = "Set_Objective_8";
+                        itemno = 62;
+                        init = /*%FSM<STATEINIT""">*/"_objective = [_enemyTriggers, [], {_x distance (getMarkerPos ""redBase"")}, ""ascend"", {true}] call bis_fnc_sortBy;" \n
+                         "_group setVariable[""objective"", _objective select 0, true];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Continue">*/
+                                class Continue
+                                {
+                                        itemno = 65;
+                                        priority = 0.000000;
+                                        to="Delete_Group_From_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Set_Objective_9">*/
+                class Set_Objective_9
+                {
+                        name = "Set_Objective_9";
+                        itemno = 63;
+                        init = /*%FSM<STATEINIT""">*/"_objective = [missionNamespace getVariable ""triggers"", [], {_x distance (getMarkerPos ""bluBase"")}, ""ascend"", {true}] call bis_fnc_sortBy;" \n
+                         "_group setVariable[""objective"", _objective select 0, true];" \n
+                         "diag_log format[""### strat output 3: %1, %2"", _group, _objective];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Continue">*/
+                                class Continue
+                                {
+                                        itemno = 65;
+                                        priority = 0.000000;
+                                        to="Delete_Group_From_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Compute_Distance_1">*/
+                class Compute_Distance_1
+                {
+                        name = "Compute_Distance_1";
+                        itemno = 64;
+                        init = /*%FSM<STATEINIT""">*/"_currentObjDist = _obj distance (leader _group);" \n
+                         "_potentialObjDist = _trigger distance (leader _group);" \n
+                         "_chance = (floor random[0,.390,2]);"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Backtrack">*/
+                                class Backtrack
+                                {
+                                        itemno = 66;
+                                        priority = 10.000000;
+                                        to="SetObjective_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(_currentObjDist > _potentialObjDist) && (_chance == 0)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Continue">*/
+                                class Continue
+                                {
+                                        itemno = 65;
+                                        priority = 0.000000;
+                                        to="Delete_Group_From_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "SetObjective_1">*/
+                class SetObjective_1
+                {
+                        name = "SetObjective_1";
+                        itemno = 67;
+                        init = /*%FSM<STATEINIT""">*/"_group setVariable[""objective"", _trigger, true];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Continue">*/
+                                class Continue
+                                {
+                                        itemno = 65;
+                                        priority = 0.000000;
+                                        to="Delete_Group_From_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Gather_Intel__on_1">*/
+                class Gather_Intel__on_1
+                {
+                        name = "Gather_Intel__on_1";
+                        itemno = 68;
+                        init = /*%FSM<STATEINIT""">*/"_enemyTriggers = [];" \n
+                         "_unownedTriggers = [];" \n
+                         "{" \n
+                         "	if(_x getVariable ""owner"" == ""west"") then {" \n
+                         "		_enemyTriggers pushBack _x;" \n
+                         "	};" \n
+                         "	if(_x getVariable ""owner"" == ""none"") then {" \n
+                         "		_unownedTriggers pushBack _x;" \n
+                         "	};" \n
+                         "}forEach (missionNamespace getVariable ""triggers"");"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Unowned_Triggers">*/
+                                class Unowned_Triggers
+                                {
+                                        itemno = 69;
+                                        priority = 10.000000;
+                                        to="Set_Objective_10";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(count _unownedTriggers) > 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Enemy_Triggers">*/
+                                class Enemy_Triggers
+                                {
+                                        itemno = 71;
+                                        priority = 5.000000;
+                                        to="Set_Objective_11";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(count _enemyTriggers) > 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "No_Triggers">*/
+                                class No_Triggers
+                                {
+                                        itemno = 100;
+                                        priority = 0.000000;
+                                        to="Set_Objective_13";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Set_Objective_10">*/
+                class Set_Objective_10
+                {
+                        name = "Set_Objective_10";
+                        itemno = 70;
+                        init = /*%FSM<STATEINIT""">*/"_unownedTriggers append _enemyTriggers;" \n
+                         "_objective = [_unownedTriggers, [], {_x distance (getMarkerPos ""redBase"")}, ""ascend"", {true}] call bis_fnc_sortBy;" \n
+                         "_group setVariable[""objective"", _objective select 1, true];" \n
+                         "//diag_log format[""### strat output 1: %1, %2"", _group, _objective];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Continue">*/
+                                class Continue
+                                {
+                                        itemno = 65;
+                                        priority = 0.000000;
+                                        to="Delete_Group_From_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Set_Objective_11">*/
+                class Set_Objective_11
+                {
+                        name = "Set_Objective_11";
+                        itemno = 72;
+                        init = /*%FSM<STATEINIT""">*/"//Make an array to track [trigger, friendly groups assigned, #of enemies near]" \n
+                         "{" \n
+                         "	_enemyTriggers set [_forEachIndex, [_x, 0,0]];" \n
+                         "} forEach _enemyTriggers;" \n
+                         "" \n
+                         "//Find the number of groups assigned to each objective" \n
+                         "{" \n
+                         "	if(side _x == east && _x != _group) then {" \n
+                         "		_trig = _x getVariable ""objective"";" \n
+                         "		{" \n
+                         "			if(_trig in _x) then {" \n
+                         "				_x set [1, (_x select 1) + 1];" \n
+                         "			};" \n
+                         "		}forEach _enemyTriggers;" \n
+                         "	};" \n
+                         "" \n
+                         "}forEach allGroups;" \n
+                         "" \n
+                         "//For each unit on the enemy team, find out which trigger they are closest to" \n
+                         "{" \n
+                         "	_unit = _x;" \n
+                         "" \n
+                         "	if(side _unit == west) then {" \n
+                         "		_trig = ([_enemyTriggers, [], {(_x select 0) distance _unit}, ""ascend"", {true}] call bis_fnc_sortBy) select 0;" \n
+                         "		{" \n
+                         "			if(_trig in _x) then {" \n
+                         "				_x set [2, (_x select 2) + 1];" \n
+                         "			};" \n
+                         "		}forEach _enemyTriggers;" \n
+                         "	};" \n
+                         "" \n
+                         "}forEach allUnits;" \n
+                         "" \n
+                         "//Assign a weighted score to each trigger according to distance from the group leader, how many groups are assigned, and how many enemies it has near it" \n
+                         "_computations = [];" \n
+                         "{" \n
+                         "	_computations pushBack (((leader _group) distance (_x select 0))^2 + ((_x select 1) + 3)^10 + (_x select 2)^10);" \n
+                         "}forEach _enemyTriggers;" \n
+                         "" \n
+                         "//Select the lowest weighted score and assign the new objective to the group" \n
+                         "_group setVariable[""objective"", (_enemyTriggers select (_computations find (selectMin _computations))) select 0, true];" \n
+                         "" \n
+                         "//diag_log format[""### strat output 2: %1, %2"", _group, (_enemyTriggers select (_computations find (selectMin _computations)))];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Continue">*/
+                                class Continue
+                                {
+                                        itemno = 65;
+                                        priority = 0.000000;
+                                        to="Delete_Group_From_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Delete_Group_From_1">*/
+                class Delete_Group_From_1
+                {
+                        name = "Delete_Group_From_1";
+                        itemno = 73;
+                        init = /*%FSM<STATEINIT""">*/"_affectedGroups deleteAt 0;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Continue">*/
+                                class Continue
+                                {
+                                        itemno = 74;
+                                        priority = 0.000000;
+                                        to="Count_Groups";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Identify_Trigger">*/
+                class Identify_Trigger
+                {
+                        name = "Identify_Trigger";
+                        itemno = 76;
+                        init = /*%FSM<STATEINIT""">*/"scopeName ""main"";" \n
+                         "{" \n
+                         "	if(_x isKindOf ""LocationArea_F"") then {" \n
+                         "		{" \n
+                         "			if(_x isKindOf ""EmptyDetector"") then {" \n
+                         "				_trigger = _x;" \n
+                         "				breakTo ""main"";" \n
+                         "			};" \n
+                         "		}forEach (synchronizedObjects _x);" \n
+                         "	};" \n
+                         "}forEach (synchronizedObjects _sector);" \n
+                         "" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "West_New_Owner_">*/
+                                class West_New_Owner_
+                                {
+                                        itemno = 3;
+                                        priority = 20.000000;
+                                        to="Adjust_Respawns";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_side == west"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "NA">*/
+                                class NA
+                                {
+                                        itemno = 96;
+                                        priority = 10.000000;
+                                        to="End_2";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "East__New_Owner">*/
+                                class East__New_Owner
+                                {
+                                        itemno = 5;
+                                        priority = 10.000000;
+                                        to="Adjust_Respawns_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_side == east"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Count_Groups_1">*/
+                class Count_Groups_1
+                {
+                        name = "Count_Groups_1";
+                        itemno = 78;
+                        init = /*%FSM<STATEINIT""">*/"_groupCount = count _groups;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Loop">*/
+                                class Loop
+                                {
+                                        itemno = 79;
+                                        priority = 20.000000;
+                                        to="Select_Group";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_groupCount > 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "End_Loop">*/
+                                class End_Loop
+                                {
+                                        itemno = 80;
+                                        priority = 0.000000;
+                                        to="End_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "End_1">*/
+                class End_1
+                {
+                        name = "End_1";
+                        itemno = 81;
+                        init = /*%FSM<STATEINIT""">*/"missionNameSpace setVariable [""initialObj"", true];" \n
+                         "diag_log ""***Sector Change Init: Done"";"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Delete_Group_From_2">*/
+                class Delete_Group_From_2
+                {
+                        name = "Delete_Group_From_2";
+                        itemno = 86;
+                        init = /*%FSM<STATEINIT""">*/"diag_log format[""@@@SectorChange OUTPUT: group: %1.....objective %2"", _group, _group getVariable ""objective""];" \n
+                         "_groups deleteAt 0;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Continue">*/
+                                class Continue
+                                {
+                                        itemno = 87;
+                                        priority = 0.000000;
+                                        to="Count_Groups_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Set_Initial_Obje">*/
+                class Set_Initial_Obje
+                {
+                        name = "Set_Initial_Obje";
+                        itemno = 88;
+                        init = /*%FSM<STATEINIT""">*/"_objective = [missionNamespace getVariable ""triggers"", [], {_x distance (getMarkerPos ""bluBase"")}, ""ascend"", {true}] call bis_fnc_sortBy;" \n
+                         "_group setVariable[""objective"", _objective select 0, true];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Continue">*/
+                                class Continue
+                                {
+                                        itemno = 85;
+                                        priority = 0.000000;
+                                        to="Delete_Group_From_2";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Select_Group">*/
+                class Select_Group
+                {
+                        name = "Select_Group";
+                        itemno = 89;
+                        init = /*%FSM<STATEINIT""">*/"_group = _groups select 0;" \n
+                         "_behaviour = _group getVariable ""behaviour"";" \n
+                         "_side = side _group;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "West_Defensive">*/
+                                class West_Defensive
+                                {
+                                        itemno = 83;
+                                        priority = 60.000000;
+                                        to="Set_Initial_Obje";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_behaviour == ""def"" && _side == west"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "West_Strategic">*/
+                                class West_Strategic
+                                {
+                                        itemno = 84;
+                                        priority = 50.000000;
+                                        to="Set_Initial_Obje_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_behaviour == ""strat"" && _side == west"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "West_Aggressive">*/
+                                class West_Aggressive
+                                {
+                                        itemno = 82;
+                                        priority = 40.000000;
+                                        to="Set_Initial_Obje_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_behaviour == ""agg"" && _side == west"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "East_Defensive">*/
+                                class East_Defensive
+                                {
+                                        itemno = 92;
+                                        priority = 30.000000;
+                                        to="Set_Initial_Obje_3";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_behaviour == ""def"" && _side == east"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "East_Strategic">*/
+                                class East_Strategic
+                                {
+                                        itemno = 93;
+                                        priority = 20.000000;
+                                        to="Set_Initial_Obje_2";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_behaviour == ""strat"" && _side == east"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "East_Aggressive">*/
+                                class East_Aggressive
+                                {
+                                        itemno = 91;
+                                        priority = 10.000000;
+                                        to="Set_Initial_Obje_2";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_behaviour == ""agg"" && _side == east"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Set_Initial_Obje_1">*/
+                class Set_Initial_Obje_1
+                {
+                        name = "Set_Initial_Obje_1";
+                        itemno = 90;
+                        init = /*%FSM<STATEINIT""">*/"_objective = [missionNamespace getVariable ""triggers"", [], {_x distance (getMarkerPos ""bluBase"")}, ""ascend"", {true}] call bis_fnc_sortBy;" \n
+                         "_group setVariable[""objective"", _objective select (floor random[0,.918,2]), true];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Continue">*/
+                                class Continue
+                                {
+                                        itemno = 85;
+                                        priority = 0.000000;
+                                        to="Delete_Group_From_2";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Set_Initial_Obje_2">*/
+                class Set_Initial_Obje_2
+                {
+                        name = "Set_Initial_Obje_2";
+                        itemno = 94;
+                        init = /*%FSM<STATEINIT""">*/"_objective = [missionNamespace getVariable ""triggers"", [], {_x distance (getMarkerPos ""redBase"")}, ""ascend"", {true}] call bis_fnc_sortBy;" \n
+                         "_group setVariable[""objective"", _objective select (floor random[0,.918,2]), true];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Continue">*/
+                                class Continue
+                                {
+                                        itemno = 85;
+                                        priority = 0.000000;
+                                        to="Delete_Group_From_2";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Set_Initial_Obje_3">*/
+                class Set_Initial_Obje_3
+                {
+                        name = "Set_Initial_Obje_3";
+                        itemno = 95;
+                        init = /*%FSM<STATEINIT""">*/"_objective = [missionNamespace getVariable ""triggers"", [], {_x distance (getMarkerPos ""redBase"")}, ""ascend"", {true}] call bis_fnc_sortBy;" \n
+                         "_group setVariable[""objective"", _objective select 0, true];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Continue">*/
+                                class Continue
+                                {
+                                        itemno = 85;
+                                        priority = 0.000000;
+                                        to="Delete_Group_From_2";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "End_2">*/
+                class End_2
+                {
+                        name = "End_2";
+                        itemno = 97;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Set_Objective_12">*/
+                class Set_Objective_12
+                {
+                        name = "Set_Objective_12";
+                        itemno = 99;
+                        init = /*%FSM<STATEINIT""">*/"_objective = [missionNamespace getVariable ""triggers"", [], {_x distance (getMarkerPos ""redBase"")}, ""ascend"", {true}] call bis_fnc_sortBy;" \n
+                         "_group setVariable[""objective"", _objective select 0, true];" \n
+                         "//diag_log format[""### strat output 3: %1, %2"", _group, _objective];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Continue">*/
+                                class Continue
+                                {
+                                        itemno = 39;
+                                        priority = 0.000000;
+                                        to="Delete_Group_From";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Set_Objective_13">*/
+                class Set_Objective_13
+                {
+                        name = "Set_Objective_13";
+                        itemno = 101;
+                        init = /*%FSM<STATEINIT""">*/"_objective = [missionNamespace getVariable ""triggers"", [], {_x distance (getMarkerPos ""bluBase"")}, ""ascend"", {true}] call bis_fnc_sortBy;" \n
+                         "_group setVariable[""objective"", _objective select 1, true];" \n
+                         "//diag_log format[""### strat output 3: %1, %2"", _group, _objective];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Continue">*/
+                                class Continue
+                                {
+                                        itemno = 65;
+                                        priority = 0.000000;
+                                        to="Delete_Group_From_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+        };
+        initState="Init";
+        finalStates[] =
+        {
+                "End",
+                "End_1",
+                "End_2",
+        };
+};
+/*%FSM</COMPILE>*/
