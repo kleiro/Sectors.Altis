@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={16841.811,30.333471,12180.666};
-		dir[]={-0.91987145,-0.24210821,0.30859768};
-		up[]={-0.22954059,0.97024822,0.077005915};
-		aside[]={0.3180609,-1.7097045e-007,0.94807678};
+		pos[]={16934.408,85.477211,12044.246};
+		dir[]={-0.29655147,-0.50735295,0.80911547};
+		up[]={-0.17459592,0.86173612,0.47636956};
+		aside[]={0.938932,1.0058284e-007,0.34412968};
 	};
 };
 binarizationWanted=0;
@@ -32,7 +32,6 @@ addons[]=
 	"A3_Structures_F_Mil_Fortification",
 	"A3_Characters_F",
 	"A3_Ui_F",
-	"A3_Modules_F_Curator_Curator",
 	"A3_Modules_F_ObjectModifiers"
 };
 class AddonsMetaData
@@ -135,7 +134,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=44;
+		items=42;
 		class Item0
 		{
 			dataType="Logic";
@@ -3088,97 +3087,6 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={16948.252,14.617318,12142.048};
-			};
-			name="czeus";
-			id=85;
-			type="ModuleCurator_F";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ModuleCurator_F_Owner";
-					expression="_this setVariable ['Owner',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="plyr1";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ModuleCurator_F_Forced";
-					expression="_this setVariable ['Forced',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="ModuleCurator_F_Name";
-					expression="_this setVariable ['Name',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="";
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="ModuleCurator_F_Addons";
-					expression="_this setVariable ['Addons',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=3;
-						};
-					};
-				};
-				nAttributes=4;
-			};
-		};
-		class Item35
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
 				position[]={16388.869,0.00020313263,12543.823};
 			};
 			id=87;
@@ -3227,7 +3135,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item36
+		class Item35
 		{
 			dataType="Group";
 			side="East";
@@ -3605,7 +3513,7 @@ class Mission
 			id=109;
 			atlOffset=4.2915344e-005;
 		};
-		class Item37
+		class Item36
 		{
 			dataType="Group";
 			side="West";
@@ -4211,7 +4119,7 @@ class Mission
 			id=111;
 			atlOffset=2.3841858e-007;
 		};
-		class Item38
+		class Item37
 		{
 			dataType="Group";
 			side="West";
@@ -4816,7 +4724,7 @@ class Mission
 			id=116;
 			atlOffset=2.3841858e-007;
 		};
-		class Item39
+		class Item38
 		{
 			dataType="Group";
 			side="West";
@@ -5422,148 +5330,7 @@ class Mission
 			id=121;
 			atlOffset=2.3841858e-007;
 		};
-		class Item40
-		{
-			dataType="Group";
-			side="West";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={16929.762,14.059248,12153.749};
-					};
-					side="West";
-					flags=7;
-					class Attributes
-					{
-						name="plyr1";
-						isPlayer=1;
-					};
-					id=127;
-					type="B_Survivor_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="Enh_featureType";
-							expression="_this setFeatureType (parseNumber _value)";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="0";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male02ENG";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0.94999999;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="Enh_ambientAnimParams";
-							expression="	if (is3DEN) then {_this call BIS_fnc_ambientAnim__terminate};	[_this,_value] spawn	{		sleep 0.1;		params ['_unit','_value'];		if (!(_value select 0 == '') && !isMultiplayer) then		{			[_unit,_value select 0,_value select 1,objNull,false,false] call BIS_fnc_ambientAnim;			waitUntil {sleep 0.1; ((behaviour _unit) == 'COMBAT') || (damage _unit > 0.6)};			_unit call BIS_fnc_ambientAnim__terminate;		};	}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"ARRAY"
-										};
-									};
-									class value
-									{
-										items=2;
-										class Item0
-										{
-											class data
-											{
-												class type
-												{
-													type[]=
-													{
-														"STRING"
-													};
-												};
-												value="";
-											};
-										};
-										class Item1
-										{
-											class data
-											{
-												class type
-												{
-													type[]=
-													{
-														"STRING"
-													};
-												};
-												value="ASIS";
-											};
-										};
-									};
-								};
-							};
-						};
-						nAttributes=4;
-					};
-				};
-			};
-			class Attributes
-			{
-			};
-			id=126;
-		};
-		class Item41
+		class Item39
 		{
 			dataType="Group";
 			side="East";
@@ -5941,7 +5708,7 @@ class Mission
 			id=133;
 			atlOffset=1.9073486e-005;
 		};
-		class Item42
+		class Item40
 		{
 			dataType="Group";
 			side="East";
@@ -6319,7 +6086,7 @@ class Mission
 			id=138;
 			atlOffset=3.4332275e-005;
 		};
-		class Item43
+		class Item41
 		{
 			dataType="Group";
 			side="East";

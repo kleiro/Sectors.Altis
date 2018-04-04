@@ -5,4 +5,6 @@
  * @Last Modified time: 2018-03-30 23:30:49
  */
 
-(_this select 0) setVariable ["isPlayer", true, true]; 
+(_this select 0) setVariable ["isPlayer", true, true];
+enableRadio false;
+enableSentences false;

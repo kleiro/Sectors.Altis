@@ -194,7 +194,7 @@ class CfgRespawnInventory {
 		displayName = "Apex";
 		role = "Assault";
 
-		weapons[] = {"hgun_P07_F", "arifle_SPAR_01_GL_blk_F", "Binocular", "Throw", "Put"};
+		weapons[] = {"arifle_SPAR_01_GL_blk_F", "hgun_P07_F", "Binocular", "Throw", "Put"};
 		magazines[] = {"16Rnd_9x21_Mag", "16Rnd_9x21_Mag", "MiniGrenade", "MiniGrenade", "MiniGrenade", "30Rnd_556x45_Stanag_Tracer_Red", "30Rnd_556x45_Stanag_Tracer_Yellow", "30Rnd_556x45_Stanag_Tracer_Yellow", "30Rnd_556x45_Stanag_Tracer_Yellow", "30Rnd_556x45_Stanag_Tracer_Yellow", "30Rnd_556x45_Stanag_Tracer_Yellow", "1Rnd_HE_Grenade_shell", "1Rnd_HE_Grenade_shell", "30Rnd_556x45_Stanag_Tracer_Yellow", "30Rnd_556x45_Stanag_Tracer_Yellow", "30Rnd_556x45_Stanag_Tracer_Yellow", "1Rnd_HE_Grenade_shell", "16Rnd_9x21_Mag"};
 		items[] = {"FirstAidKit", "FirstAidKit", "FirstAidKit", "FirstAidKit", "FirstAidKit"};
 		linkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemRadio", "ItemGPS", "NVGoggles", "", "", "optic_ERCO_blk_F", "", "", "", "", "", "", "", "", "", "V_PlateCarrier2_rgr", "H_HelmetSpecB_snakeskin", "G_Combat"};
@@ -207,7 +207,7 @@ class CfgRespawnInventory {
 		displayName = "Apex";
 		role = "SpecOps";
 
-		weapons[] = {"hgun_Pistol_heavy_01_F", "SMG_05_F", "Binocular", "Throw", "Put"};
+		weapons[] = {"SMG_05_F", "hgun_Pistol_heavy_01_F", "Binocular", "Throw", "Put"};
 		magazines[] = {"11Rnd_45ACP_Mag", "11Rnd_45ACP_Mag", "MiniGrenade", "MiniGrenade", "SmokeShell", "SmokeShell", "30Rnd_9x21_Mag_SMG_02", "30Rnd_9x21_Mag_SMG_02", "30Rnd_9x21_Mag_SMG_02", "30Rnd_9x21_Mag_SMG_02", "30Rnd_9x21_Mag_SMG_02", "30Rnd_9x21_Mag_SMG_02", "30Rnd_9x21_Mag_SMG_02", "30Rnd_9x21_Mag_SMG_02", "DemoCharge_Remote_Mag", "DemoCharge_Remote_Mag", "DemoCharge_Remote_Mag", "DemoCharge_Remote_Mag", "30Rnd_9x21_Mag_SMG_02", "11Rnd_45ACP_Mag"};
 		items[] = {"FirstAidKit", "FirstAidKit", "FirstAidKit", "FirstAidKit", "FirstAidKit"};
 		linkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemRadio", "ItemGPS", "NVGoggles", "muzzle_snds_L", "acc_pointer_IR", "optic_Aco_smg", "", "", "", "", "", "muzzle_snds_acp", "", "optic_MRD", "", "V_PlateCarrier1_rgr", "H_HelmetB_light", "G_Lowprofile"};
@@ -220,7 +220,7 @@ class CfgRespawnInventory {
 		displayName = "Apex";
 		role = "Support";
 
-		weapons[] = {"hgun_P07_F", "Binocular", "arifle_SPAR_02_blk_F", "Throw", "Put"};
+		weapons[] = {"arifle_SPAR_02_blk_F", "hgun_P07_F", "Binocular", "Throw", "Put"};
 		magazines[] = {"HandGrenade", "HandGrenade", "16Rnd_9x21_Mag", "16Rnd_9x21_Mag", "150Rnd_556x45_Drum_Mag_Tracer_F", "150Rnd_556x45_Drum_Mag_Tracer_F", "150Rnd_556x45_Drum_Mag_Tracer_F", "150Rnd_556x45_Drum_Mag_Tracer_F", "16Rnd_9x21_Mag"};
 		items[] = {"FirstAidKit", "FirstAidKit", "FirstAidKit", "FirstAidKit", "FirstAidKit"};
 		linkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemRadio", "ItemGPS", "NVGoggles", "", "acc_pointer_IR", "", "bipod_01_F_blk", "", "", "", "", "", "", "", "", "V_PlateCarrier1_rgr", "H_HelmetB_grass", "G_Combat"};
@@ -233,7 +233,7 @@ class CfgRespawnInventory {
 		displayName = "Apex";
 		role = "Engineer";
 
-		weapons[] = {"launch_NLAW_F", "hgun_P07_F", "Binocular", "arifle_ARX_blk_F", "Throw", "Put"};
+		weapons[] = { "arifle_ARX_blk_F", "launch_NLAW_F", "hgun_P07_F", "Binocular", "Throw", "Put"};
 		magazines[] = {"16Rnd_9x21_Mag", "16Rnd_9x21_Mag", "MiniGrenade", "MiniGrenade", "APERSBoundingMine_Range_Mag", "APERSBoundingMine_Range_Mag", "30Rnd_65x39_caseless_green", "30Rnd_65x39_caseless_green", "30Rnd_65x39_caseless_green", "10Rnd_50BW_Mag_F", "30Rnd_65x39_caseless_green", "30Rnd_65x39_caseless_green", "30Rnd_65x39_caseless_green", "30Rnd_65x39_caseless_green", "16Rnd_9x21_Mag"};
 		items[] = {"FirstAidKit", "FirstAidKit", "FirstAidKit", "FirstAidKit", "FirstAidKit"};
 		linkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemRadio", "ItemGPS", "NVGoggles", "", "", "optic_Aco", "", "", "", "", "", "", "", "", "", "V_PlateCarrier1_rgr", "H_HelmetSpecB_snakeskin", "G_Lowprofile"};
@@ -246,7 +246,7 @@ class CfgRespawnInventory {
 		displayName = "Apex";
 		role = "DM";
 
-		weapons[] = {"hgun_Pistol_heavy_01_F", "Binocular", "arifle_SPAR_03_blk_F", "Throw", "Put"};
+		weapons[] = {"arifle_SPAR_03_blk_F", "hgun_Pistol_heavy_01_F", "Binocular", "Throw", "Put"};
 		magazines[] = {"11Rnd_45ACP_Mag", "11Rnd_45ACP_Mag", "11Rnd_45ACP_Mag", "SmokeShell", "SmokeShell", "MiniGrenade", "MiniGrenade", "20Rnd_762x51_Mag", "20Rnd_762x51_Mag", "20Rnd_762x51_Mag", "20Rnd_762x51_Mag", "20Rnd_762x51_Mag", "20Rnd_762x51_Mag", "20Rnd_762x51_Mag", "20Rnd_762x51_Mag", "11Rnd_45ACP_Mag"};
 		items[] = {"FirstAidKit", "FirstAidKit", "FirstAidKit", "FirstAidKit", "FirstAidKit"};
 		linkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemRadio", "ItemGPS", "NVGoggles", "", "acc_flashlight", "optic_AMS", "", "", "", "", "", "", "", "optic_MRD", "", "V_PlateCarrier1_rgr", "H_Cap_oli_hs", ""};
@@ -260,7 +260,7 @@ class CfgRespawnInventory {
 		displayName = "Apex";
 		role = "Assault";
 
-		weapons[] = {"hgun_Rook40_F", "Binocular", "arifle_AK12_GL_F", "Throw", "Put"};
+		weapons[] = {"arifle_AK12_GL_F", "hgun_Rook40_F", "Binocular", "Throw", "Put"};
 		magazines[] = {"1Rnd_HE_Grenade_shell", "MiniGrenade", "MiniGrenade", "MiniGrenade", "16Rnd_9x21_Mag", "16Rnd_9x21_Mag", "30Rnd_762x39_Mag_F", "30Rnd_762x39_Mag_F", "30Rnd_762x39_Mag_F", "30Rnd_762x39_Mag_F", "30Rnd_762x39_Mag_F", "30Rnd_762x39_Mag_F", "1Rnd_HE_Grenade_shell", "30Rnd_762x39_Mag_F", "1Rnd_HE_Grenade_shell", "16Rnd_9x21_Mag"};
 		items[] = {"FirstAidKit", "FirstAidKit", "FirstAidKit", "FirstAidKit", "FirstAidKit"};
 		linkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemRadio", "ItemGPS", "NVGoggles_OPFOR", "", "", "optic_Arco_blk_F", "", "", "", "", "", "", "", "", "", "V_HarnessOGL_brn", "H_HelmetLeaderO_ocamo", ""};
@@ -273,7 +273,7 @@ class CfgRespawnInventory {
 		displayName = "Apex";
 		role = "SpecOps";
 
-		weapons[] = {"hgun_Rook40_F", "Binocular", "arifle_CTAR_hex_F", "Throw", "Put"};
+		weapons[] = {"arifle_CTAR_hex_F", "hgun_Rook40_F", "Binocular", "Throw", "Put"};
 		magazines[] = {"MiniGrenade", "MiniGrenade", "SmokeShell", "SmokeShell", "16Rnd_9x21_Mag", "16Rnd_9x21_Mag", "30Rnd_580x42_Mag_F", "30Rnd_580x42_Mag_F", "30Rnd_580x42_Mag_F", "30Rnd_580x42_Mag_F", "30Rnd_580x42_Mag_F", "30Rnd_580x42_Mag_F", "DemoCharge_Remote_Mag", "DemoCharge_Remote_Mag", "DemoCharge_Remote_Mag", "DemoCharge_Remote_Mag", "30Rnd_580x42_Mag_F", "16Rnd_9x21_Mag"};
 		items[] = {"FirstAidKit", "FirstAidKit", "FirstAidKit", "FirstAidKit", "FirstAidKit"};
 		linkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemRadio", "ItemGPS", "NVGoggles_OPFOR", "muzzle_snds_58_blk_F", "acc_pointer_IR", "optic_ACO_grn_smg", "", "", "", "", "", "muzzle_snds_L", "", "", "", "V_HarnessOGL_brn", "H_HelmetO_ocamo", ""};
@@ -286,7 +286,7 @@ class CfgRespawnInventory {
 		displayName = "Apex";
 		role = "Support";
 
-		weapons[] = {"hgun_Rook40_F", "Binocular", "arifle_CTARS_blk_F", "Throw", "Put"};
+		weapons[] = {"arifle_CTARS_blk_F", "hgun_Rook40_F", "Binocular", "Throw", "Put"};
 		magazines[] = {"16Rnd_9x21_Mag", "16Rnd_9x21_Mag", "HandGrenade", "HandGrenade", "100Rnd_580x42_Mag_F", "100Rnd_580x42_Mag_F", "100Rnd_580x42_Mag_F", "100Rnd_580x42_Mag_F", "100Rnd_580x42_Mag_F", "100Rnd_580x42_Mag_F", "16Rnd_9x21_Mag"};
 		items[] = {"FirstAidKit", "FirstAidKit", "FirstAidKit", "FirstAidKit", "FirstAidKit"};
 		linkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemRadio", "ItemGPS", "NVGoggles_OPFOR", "", "acc_pointer_IR", "", "", "", "", "", "", "", "", "", "", "V_HarnessO_brn", "H_HelmetO_ocamo", ""};
@@ -299,7 +299,7 @@ class CfgRespawnInventory {
 		displayName = "Apex";
 		role = "Engineer";
 
-		weapons[] = {"launch_RPG32_F", "hgun_Rook40_F", "Binocular", "arifle_ARX_hex_F", "Throw", "Put"};
+		weapons[] = {"arifle_ARX_hex_F", "launch_RPG32_F", "hgun_Rook40_F", "Binocular", "Throw", "Put"};
 		magazines[] = {"16Rnd_9x21_Mag", "16Rnd_9x21_Mag", "MiniGrenade", "MiniGrenade", "APERSBoundingMine_Range_Mag", "APERSBoundingMine_Range_Mag", "30Rnd_65x39_caseless_green", "30Rnd_65x39_caseless_green", "30Rnd_65x39_caseless_green", "30Rnd_65x39_caseless_green", "30Rnd_65x39_caseless_green", "30Rnd_65x39_caseless_green", "10Rnd_50BW_Mag_F", "30Rnd_65x39_caseless_green", "16Rnd_9x21_Mag"};
 		items[] = {"FirstAidKit", "FirstAidKit", "FirstAidKit", "FirstAidKit", "FirstAidKit"};
 		linkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemRadio", "ItemGPS", "NVGoggles_OPFOR", "", "", "optic_ACO_grn", "", "", "", "", "", "", "", "", "", "V_HarnessO_brn", "H_HelmetLeaderO_ocamo", ""};
@@ -312,7 +312,7 @@ class CfgRespawnInventory {
 		displayName = "Apex";
 		role = "DM";
 
-		weapons[] = {"hgun_Rook40_F", "srifle_DMR_07_hex_F", "Binocular", "Throw", "Put"};
+		weapons[] = {"srifle_DMR_07_hex_F", "hgun_Rook40_F", "Binocular", "Throw", "Put"};
 		magazines[] = {"16Rnd_9x21_Mag", "16Rnd_9x21_Mag", "16Rnd_9x21_Mag", "MiniGrenade", "MiniGrenade", "SmokeShell", "SmokeShell", "20Rnd_650x39_Cased_Mag_F", "20Rnd_650x39_Cased_Mag_F", "20Rnd_650x39_Cased_Mag_F", "20Rnd_650x39_Cased_Mag_F", "20Rnd_650x39_Cased_Mag_F", "20Rnd_650x39_Cased_Mag_F", "20Rnd_650x39_Cased_Mag_F", "20Rnd_650x39_Cased_Mag_F", "16Rnd_9x21_Mag"};
 		items[] = {"FirstAidKit", "FirstAidKit", "FirstAidKit", "FirstAidKit", "FirstAidKit"};
 		linkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemRadio", "ItemGPS", "NVGoggles_OPFOR", "", "", "optic_KHS_hex", "", "", "", "", "", "", "", "", "", "V_HarnessO_brn", "H_MilCap_ocamo", ""};
