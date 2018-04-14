@@ -7,9 +7,14 @@
 
 
 ---ToDo:
-1. Redo aiRespawn using bis_fnc_loadInventory and randomly select units loadout
+1. Change loadouts to on/off, with specific loadouts like pistols only being separate arrays in inventoryDefines
 
-2. MAKE MOAR LOADOUTS!!!!! :D
+2. Create killfeed
+
+3. Add force first person options
+
+3. MAKE MOAR LOADOUTS!!!!! :D
+
 
 ---FSM's:
 1. sectorChange - runs when a sector changes sides and then finds all groups assigned to it and selects a new waypoint based on their set behavior, also adds/deletes respawn points for each side
@@ -18,15 +23,6 @@
 
 3. reEval - runs for each strategic and defense group to determine if they should switch objectives if the current one has not been taken within x amount of time
 
-
----init functions:
-1. Set parameters
-
-2. Find main bases and capturable sectors, set groups behaviour, spawn the sectorChange and unitMove
-
-
----regular functions:
-1. Respawn script for finding the correct sector in which to move ai (they'll probably spawn at the original base), a safe place to put them at the sector, and assigns their correct loadout
 
 
 ---Aggressive FSM Branch

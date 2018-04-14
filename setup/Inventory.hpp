@@ -32,7 +32,7 @@ class CfgRespawnInventory {
 	//BluFor
 		//Assault
 		class VB1 { 
-		displayName = "Vanilla";
+		displayName = "A3 Base";
 		role = "Assault";
 
 		weapons[] = {"arifle_MX_GL_Black_F", "hgun_P07_F", "Binocular", "Throw", "Put"};
@@ -45,7 +45,7 @@ class CfgRespawnInventory {
 
 		//SpecOps
 		class VB2 { 
-		displayName = "Vanilla";
+		displayName = "A3 Base";
 		role = "SpecOps";
 
 		weapons[] = {"SMG_02_F", "hgun_Pistol_heavy_01_F", "Binocular", "Throw", "Put"};
@@ -58,7 +58,7 @@ class CfgRespawnInventory {
 
 		//Support
 		class VB3 { 
-		displayName = "Vanilla";
+		displayName = "A3 Base";
 		role = "Support";
 
 		weapons[] = {"LMG_Mk200_F", "hgun_P07_F", "Binocular", "Throw", "Put"};
@@ -71,7 +71,7 @@ class CfgRespawnInventory {
 
 		//Engineer
 		class VB4 { 
-		displayName = "Vanilla";
+		displayName = "A3 Base";
 		role = "Engineer";
 
 		weapons[] = {"arifle_MXC_Black_F", "launch_NLAW_F", "hgun_P07_F", "Binocular", "Throw", "Put"};
@@ -84,7 +84,7 @@ class CfgRespawnInventory {
 
 		//DM
 		class VB5 { 
-		displayName = "Vanilla";
+		displayName = "A3 Base";
 		role = "DM";
 
 		weapons[] = {"srifle_EBR_F", "hgun_Pistol_heavy_01_F", "Binocular", "Throw", "Put"};
@@ -97,7 +97,7 @@ class CfgRespawnInventory {
 
 		//Recon
 		class VB6 { 
-		displayName = "Vanilla";
+		displayName = "A3 Base";
 		role = "Recon";
 
 		weapons[] = {"srifle_LRR_F", "hgun_P07_F", "Binocular", "Throw", "Put"};
@@ -111,7 +111,7 @@ class CfgRespawnInventory {
 	//OpFor
 		//Assault
 		class VO1 { 
-		displayName = "Vanilla";
+		displayName = "A3 Base";
 		role = "Assault";
 
 		weapons[] = {"arifle_Katiba_GL_F", "hgun_Rook40_F", "Binocular", "Throw", "Put"};
@@ -124,7 +124,7 @@ class CfgRespawnInventory {
 
 		//SpecOps
 		class VO2 { 
-		displayName = "Vanilla";
+		displayName = "A3 Base";
 		role = "SpecOps";
 
 		weapons[] = {"SMG_01_F", "hgun_Rook40_F", "Binocular", "Throw", "Put"};
@@ -137,7 +137,7 @@ class CfgRespawnInventory {
 
 		//Support
 		class VO3 { 
-		displayName = "Vanilla";
+		displayName = "A3 Base";
 		role = "Support";
 
 		weapons[] = {"LMG_Zafir_F", "hgun_Rook40_F", "Binocular", "Throw", "Put"};
@@ -150,7 +150,7 @@ class CfgRespawnInventory {
 
 		//Engineer
 		class VO4 { 
-		displayName = "Vanilla";
+		displayName = "A3 Base";
 		role = "Engineer";
 
 		weapons[] = {"arifle_Katiba_C_F", "launch_RPG32_F", "hgun_Rook40_F", "Binocular", "Throw", "Put"};
@@ -163,7 +163,7 @@ class CfgRespawnInventory {
 
 		//DM
 		class VO5 { 
-		displayName = "Vanilla";
+		displayName = "A3 Base";
 		role = "DM";
 
 		weapons[] = {"srifle_DMR_01_F", "hgun_Rook40_F", "Binocular", "Throw", "Put"};
@@ -176,7 +176,7 @@ class CfgRespawnInventory {
 
 		//Recon
 		class VO6 { 
-		displayName = "Vanilla";
+		displayName = "A3 Base";
 		role = "Recon";
 
 		weapons[] = {"srifle_GM6_F", "hgun_Rook40_F", "Binocular", "Throw", "Put"};

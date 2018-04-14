@@ -8,6 +8,9 @@
 params ["_unit", "_slDistance","_closestTrigger","_closestTriggerDistance","_spawnPos"];
 if(isPlayer _unit) exitWith {};
 
+//Make the unit invisible
+[_unit, true] remoteExec ["hideObjectGlobal", 2, false];
+
 _group = _unit getVariable "group";
 _currentObjective = _group getVariable "objective";
 _class = _unit getVariable "class";
@@ -81,3 +84,4 @@ switch (true) do {
 
 //Move the unit to the correct location
 _unit setPos _spawnPos;
+[_unit, true] remoteExec ["hideObjectGlobal", 2, false];

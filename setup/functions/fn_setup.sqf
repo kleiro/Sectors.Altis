@@ -18,7 +18,7 @@ _triggerSearch = nearestObjects [getMarkerPos "bluBase", ["locationarea_f"], 400
 	{
 		if (_x isKindOf "EmptyDetector") then {
 			_triggers pushBack _x;
-			_x setVariable ["owner", "none"];
+			_x setVariable ["owner", "none", true];
 		};
 	}forEach (synchronizedObjects _x);
 }forEach _triggerSearch;
@@ -48,9 +48,16 @@ missionNameSpace setVariable ["triggers", _triggers];
 		} else {
 			_unit setVariable ["class",_forEachIndex];
 		};
-		_unit setVariable ["group", group _unit];
+		_unit setVariable ["group", group _unit, true];
 		_unit addEventHandler ["Fired", {(_this select 0) setVariable ["lastFired", diag_tickTime];}];
-		_unit addEventHandler ["Respawn", {[_this select 0] spawn psq_fnc_aiRespawn;[side (_this select 0), -1] call BIS_fnc_respawnTickets;}];
+		_unit addEventHandler ["Respawn", {
+			if((_this select 0) getVariable ["isPlayer", false]) then {
+				[(_this select 0)] remoteExec ["psq_fnc_tempInvincible", (_this select 0), false];
+			}else{
+				[(_this select 0)] remoteExec ["psq_fnc_aiRespawn", (_this select 0), false];
+				[side (_this select 0), -1] call BIS_fnc_respawnTickets;
+			};			
+		}];
 
 		[_unit] remoteExec ["psq_fnc_setLoadout", _unit, false];
 		

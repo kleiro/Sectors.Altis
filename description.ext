@@ -11,6 +11,7 @@ respawn = 3;
 respawnTemplates[] = {"Counter", "MenuPosition", "MenuInventory"};
 respawnOnStart = 1;
 enableDebugConsole = 1;
+aiKills = 1;
 
 class CfgDebriefing {
 	class End1{
@@ -73,15 +74,17 @@ class CfgRemoteExec {
 	class functions {
 		mode = 1;
 		jip = 1;
-		class psq_fnc_loadoutSet {allowedTargets = 0;};
+		class psq_fnc_aiRespawn {allowedTargets = 0;};
 		class psq_fnc_combatMove {allowedTargets = 0;};
 		class psq_fnc_defensiveCover {allowedTargets = 0;};
+		class psq_fnc_tempInvincible {allowedTargets = 0;};
 	};
 	class commands {
 		jip = 1;
 		class forceSpeed {allowedTargets = 0;};
 		class enableAI {allowedTargets = 0;};
 		class findNearestEnemy {allowedTargets = 0;};
+		class hideObjectGlobal {allowedTargets = 0;};
 	};
 };
 

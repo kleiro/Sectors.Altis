@@ -325,7 +325,7 @@ class FSM
                          "" \n
                          "_newRes = [west, (getPos _trigger)] call BIS_fnc_addRespawnPosition;" \n
                          "_trigger setVariable [""spawn"", _newRes];" \n
-                         "_trigger setVariable [""owner"", ""west""];"/*%FSM</STATEINIT""">*/;
+                         "_trigger setVariable [""owner"", ""west"", true];"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
@@ -355,7 +355,7 @@ class FSM
                          "" \n
                          "_newRes = [east, (getPos _trigger)] call BIS_fnc_addRespawnPosition;" \n
                          "_trigger setVariable [""spawn"", _newRes];" \n
-                         "_trigger setVariable [""owner"", ""east""];"/*%FSM</STATEINIT""">*/;
+                         "_trigger setVariable [""owner"", ""east"", true];"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
