@@ -80,35 +80,43 @@ missionNameSpace setVariable ["triggers", _triggers];
 
 }forEach allGroups;
 
-_loadoutSet = switch ("WeaponSet" call BIS_fnc_getParamValue) do {
-	//Vanilla
-	case 0:{
-		_westSet = ((missionNamespace getVariable ("westInventory")) select 0);
-		_eastSet = ((missionNamespace getVariable ("eastInventory")) select 0);
+_loadoutSet = switch true do {
+	//RHS only 
+	case (("WeaponSet" call BIS_fnc_getParamValue) == 2 && (isClass(configFile >> "CfgPatches" >> "rhs_main")) && (isClass(configFile >> "CfgPatches" >> "rhsusf_main"))):{
+		_westSet = ((missionNamespace getVariable ("westInventory")) select 3);
+		_eastSet = ((missionNamespace getVariable ("eastInventory")) select 3);
 		_set = [_westSet, _eastSet];
 		_set
+
 	};
 
-	//Vanilla + Apex
-	case 1:{
-		_westSet = ((missionNamespace getVariable ("westInventory")) select 0);
-		_westSet append ((missionNamespace getVariable ("westInventory")) select 1);
-
-		_eastSet = ((missionNamespace getVariable ("eastInventory")) select 0);
-		_eastSet append ((missionNamespace getVariable ("eastInventory")) select 1);
-		_set = [_westSet, _eastSet];
-		_set
-	};
-
-	//Pistols Only 
-	case 2:{
-		//Whenever we add RHS or CUP mods, add the loadout indexes to an array [3,7,10] and selectRandom instead of select 2
+	//Pistols Only
+	case (("WeaponSet" call BIS_fnc_getParamValue) == 1) : {
 		_westSet = ((missionNamespace getVariable ("westInventory")) select 2);
 		_eastSet = ((missionNamespace getVariable ("eastInventory")) select 2);
 		_set = [_westSet, _eastSet];
 		_set
 	};
+
+	//All 
+	default {
+		_westSet = ((missionNamespace getVariable ("westInventory")) select 0);
+		_eastSet = ((missionNamespace getVariable ("eastInventory")) select 0);
+
+		if ("ApexWeapons" call BIS_fnc_getParamValue == 1) then {
+			_westSet append ((missionNamespace getVariable ("westInventory")) select 1);
+			_eastSet append ((missionNamespace getVariable ("eastInventory")) select 1);
+		};
+		if ((isClass(configFile >> "CfgPatches" >> "rhs_main")) && (isClass(configFile >> "CfgPatches" >> "rhsusf_main"))) then {
+			_westSet append ((missionNamespace getVariable ("westInventory")) select 3);
+			_eastSet append ((missionNamespace getVariable ("eastInventory")) select 3);
+		};
+		_set = [_westSet, _eastSet];
+		_set
+	};
 };
+
+
 {[west, _x] call BIS_fnc_addRespawnInventory;}forEach (_loadoutSet select 0);
 {[east, _x] call BIS_fnc_addRespawnInventory;}forEach (_loadoutSet select 1);
 

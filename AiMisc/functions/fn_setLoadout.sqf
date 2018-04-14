@@ -8,20 +8,20 @@
 params ["_unit"];
 
 _loadoutClass = switch ("WeaponSet" call BIS_fnc_getParamValue) do {
-	//Vanilla
+	//All
 	case 0:{
-		selectRandom ((missionNamespace getVariable (str (side _unit) + "Inventory")) select 0);
+		selectRandom ((missionNamespace getVariable (str (side _unit) + "Inventory")) select (selectRandom [0,1,3]));
 	};
 
-	//Vanilla + Apex
+	//Pistols Only
 	case 1:{
-		selectRandom ((missionNamespace getVariable (str (side _unit) + "Inventory")) select (floor random 2));
+		selectRandom ((missionNamespace getVariable (str (side _unit) + "Inventory")) select 2);
 	};
 
-	//Pistols Only 
+	//RHS Only 
 	case 2:{
 		//Whenever we add RHS or CUP mods, add the loadout indexes to an array [3,7,10] and selectRandom instead of select 2
-		selectRandom ((missionNamespace getVariable (str (side _unit) + "Inventory")) select 2);
+		selectRandom ((missionNamespace getVariable (str (side _unit) + "Inventory")) select 3);
 	};
 };
 

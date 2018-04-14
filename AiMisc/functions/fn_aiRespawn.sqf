@@ -84,4 +84,4 @@ switch (true) do {
 
 //Move the unit to the correct location
 _unit setPos _spawnPos;
-[_unit, true] remoteExec ["hideObjectGlobal", 2, false];
+[_unit, false] remoteExec ["hideObjectGlobal", 2, false];

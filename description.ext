@@ -33,10 +33,16 @@ class CfgDebriefing {
 };
 
 class Params{
+	class ApexWeapons{
+		title = "Enable ArmA 3 Apex Loadouts?"
+		values[] = {0,1};
+		texts[] = {"No", "Yes"};
+		default = 1;
+	};
 	class WeaponSet{
 		title = "Weapon Set";
 		values[] = {0,1,2};
-		texts[] = {"Base Vanilla", "Apex", "Pistols Only"};
+		texts[] = {"All", "Pistols Only", "RHS Only (Requires RHS AFRF & USF mods to be active)"};
 		default = 0;
 	};
 	class BluDifficulty{
