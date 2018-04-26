@@ -44,3 +44,32 @@
 85/15 split is .551
 90/10 split is .390
 95/5 split is .08
+
+---Rethink Loadouts
+1. Assign appropriate vanilla loadout to player
+2. Remove weapon and magazines
+3. Store magazine masses for each weapon in a temporary array
+4. Get uniformType parameter and switch gear on player
+5. Add new weapon from selected loadout with # of magazines that match the mass of the old magazines
+6. Load magazines into weapons
+
+Each new weapon loadout will have to be added to cfgRespawnInventory, but can be done so with vanilla gear
+
+bluUniformType array =[
+    //ocpCamo
+    [uniform, 
+    [assault headgear, specops headgear, support headgear, etc...],
+    [assault facewear, specops facewear, etc...],
+    [assault vest, specops vest, etc...],
+    [assault backpack, specops backpack, etc...],
+    ], 
+
+    //M81Camo
+    [uniform, 
+    [assault headgear, specops headgear, support headgear, etc...],
+    [assault facewear, specops facewear, etc...],
+    [assault vest, specops vest, etc...],
+    [assault backpack, specops backpack, etc...],
+    ]
+];
+
