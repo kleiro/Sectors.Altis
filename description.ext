@@ -2,7 +2,7 @@
  * @Author: MoarRightRudder 
  * @Date: 2018-03-29 16:59:49 
  * @Last Modified by: MoarRightRudder
- * @Last Modified time: 2018-04-01 23:26:29
+ * @Last Modified time: 2018-04-26 17:17:48
  */
 
  
@@ -34,15 +34,27 @@ class CfgDebriefing {
 
 class Params{
 	class ApexWeapons{
-		title = "Enable ArmA 3 Apex Loadouts?"
+		title = "Disable ArmA 3 DLC Loadouts?";
 		values[] = {0,1};
 		texts[] = {"No", "Yes"};
-		default = 1;
+		default = 0;
 	};
-	class WeaponSet{
-		title = "Weapon Set";
+	class PistolsOnly{
+		title = "Pistols Only Mode (Unarmored uniforms are recommended)";
+		values[] = {0,1};
+		texts[] = {"Disabled", "Enabled"};
+		default = 0;
+	};
+	class WestUniformSet{
+		title = "BluFor Uniforms";
+		values[] = {0,1,2,3,4};
+		texts[] = {"Vanilla","Tropic","M81 Woodland (Requires RHS)", "MARPAT D (Requires RHS)", "MARPAT WD (Requires RHS)"};
+		default = 0;
+	};
+	class EastUniformSet{
+		title = "OpFor Uniforms";
 		values[] = {0,1,2};
-		texts[] = {"All", "Pistols Only", "RHS Only (Requires RHS AFRF & USF mods to be active)"};
+		texts[] = {"Vanilla","Tropic","Urban"};
 		default = 0;
 	};
 	class BluDifficulty{

@@ -6,6 +6,7 @@
  */
 
 #include "setup\inventoryDefines.hpp"
+#include "setup\uniformDefines.hpp"
 
 addMissionEventHandler ["handleDisconnect", {(_this select 0) setVariable ["isPlayer", false, true];}];
 

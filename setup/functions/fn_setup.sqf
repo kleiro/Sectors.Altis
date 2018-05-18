@@ -2,7 +2,7 @@
  * @Author: MoarRightRudder 
  * @Date: 2018-03-29 14:50:18 
  * @Last Modified by: MoarRightRudder
- * @Last Modified time: 2018-04-03 12:24:18
+ * @Last Modified time: 2018-04-26 17:20:52
  */
 
 //Setup - Adds base spawns, finds sectors, determines group behaviours and sets their init objective
@@ -52,6 +52,7 @@ missionNameSpace setVariable ["triggers", _triggers];
 		_unit addEventHandler ["Fired", {(_this select 0) setVariable ["lastFired", diag_tickTime];}];
 		_unit addEventHandler ["Respawn", {
 			if((_this select 0) getVariable ["isPlayer", false]) then {
+				[(_this select 0)] remoteExec ["psq_fnc_setLoadout", (_this select 0), false];
 				[(_this select 0)] remoteExec ["psq_fnc_tempInvincible", (_this select 0), false];
 			}else{
 				[(_this select 0)] remoteExec ["psq_fnc_aiRespawn", (_this select 0), false];
@@ -80,45 +81,110 @@ missionNameSpace setVariable ["triggers", _triggers];
 
 }forEach allGroups;
 
-_loadoutSet = switch true do {
-	//RHS only 
-	case (("WeaponSet" call BIS_fnc_getParamValue) == 2 && (isClass(configFile >> "CfgPatches" >> "rhs_main")) && (isClass(configFile >> "CfgPatches" >> "rhsusf_main"))):{
-		_westSet = ((missionNamespace getVariable ("westInventory")) select 3);
-		_eastSet = ((missionNamespace getVariable ("eastInventory")) select 3);
-		_set = [_westSet, _eastSet];
-		_set
+//Weapon loadouts
+_westLoadouts = [];
+_eastLoadouts = [];
 
+//1. Add vanilla weapons to east and west respawn inventories
+{
+	_westLoadouts append (_x select 0);
+}forEach (missionNamespace getVariable "westInventory");
+{
+	_eastLoadouts append (_x select 0);
+}forEach (missionNamespace getVariable "eastInventory");
+
+//2. Determine if the host wants to disable DLC weapons, otherwise add them
+if("ApexWeapons" call BIS_fnc_getParamValue == 0) then {
+
+	{
+		_westLoadouts append (_x select 1);
+	}forEach (missionNamespace getVariable "westInventory");
+	{
+		_eastLoadouts append (_x select 1);
+	}forEach (missionNamespace getVariable "eastInventory");
+
+};
+
+//3. If the ADR97 is enabled, add it 
+if(isClass(configFile >> "CfgPatches" >> "A3_Weapons_F_Mod")) then {
+	_westLoadouts append (((missionNamespace getVariable "westInventory") select 1) select 4);
+	_eastLoadouts append (((missionNamespace getVariable "eastInventory") select 1) select 4);
+};
+
+//4. If RHS is enabled, add its loadouts
+if((isClass(configFile >> "CfgPatches" >> "rhs_main")) && (isClass(configFile >> "CfgPatches" >> "rhsusf_main"))) then {
+
+	{
+		_westLoadouts append (_x select 2);
+	}forEach (missionNamespace getVariable "westInventory");
+	{
+		_eastLoadouts append (_x select 2);
+	}forEach (missionNamespace getVariable "eastInventory");
+
+};
+
+{[west, _x] call BIS_fnc_addRespawnInventory;}forEach _westLoadouts;
+{[east, _x] call BIS_fnc_addRespawnInventory;}forEach _eastLoadouts;
+
+//Set loadouts
+diag_log format ["###Weapon OUTPUT: BLU %1, OP %2", _westLoadouts, _eastLoadouts];
+missionNamespace setVariable ["westLoadout", _westLoadouts, true];
+missionNamespace setVariable ["eastLoadout", _eastLoadouts, true];
+
+//Set uniforms
+private ["_westUniform", "_eastUniform"];
+
+switch ("WestUniformSet" call BIS_fnc_getParamValue) do {
+	case 0: {
+		_westUniform = "Vanilla";
 	};
 
-	//Pistols Only
-	case (("WeaponSet" call BIS_fnc_getParamValue) == 1) : {
-		_westSet = ((missionNamespace getVariable ("westInventory")) select 2);
-		_eastSet = ((missionNamespace getVariable ("eastInventory")) select 2);
-		_set = [_westSet, _eastSet];
-		_set
-	};
-
-	//All 
 	default {
-		_westSet = ((missionNamespace getVariable ("westInventory")) select 0);
-		_eastSet = ((missionNamespace getVariable ("eastInventory")) select 0);
+		diag_log format["wudefs: %1", (missionNamespace getVariable "westUniformDefinitions")];
+		diag_log format["wuset: %1", ("WestUniformSet" call BIS_fnc_getParamValue)];
 
-		if ("ApexWeapons" call BIS_fnc_getParamValue == 1) then {
-			_westSet append ((missionNamespace getVariable ("westInventory")) select 1);
-			_eastSet append ((missionNamespace getVariable ("eastInventory")) select 1);
+		_westUniform = ((missionNamespace getVariable "westUniformDefinitions") select (("WestUniformSet" call BIS_fnc_getParamValue)-1));
+		switch (true) do {
+			//Default back to vanilla uniforms if the selected uniform's mods are not enabled
+			case (_westUniform select 0 == "RHS"): {
+				if (!(isClass(configFile >> "CfgPatches" >> "rhs_main")) || !(isClass(configFile >> "CfgPatches" >> "rhsusf_main"))) then {
+					_westUniform == "Vanilla";
+				};
+			};
+			case (_westUniform select 0 == "Apex"): {
+				if ("ApexWeapons" call BIS_fnc_getParamValue == 1) then {
+					_westUniform == "Vanilla";
+				};
+			};
 		};
-		if ((isClass(configFile >> "CfgPatches" >> "rhs_main")) && (isClass(configFile >> "CfgPatches" >> "rhsusf_main"))) then {
-			_westSet append ((missionNamespace getVariable ("westInventory")) select 3);
-			_eastSet append ((missionNamespace getVariable ("eastInventory")) select 3);
-		};
-		_set = [_westSet, _eastSet];
-		_set
 	};
 };
 
+switch ("EastUniformSet" call BIS_fnc_getParamValue) do {
+	case 0: {
+		_eastUniform = "Vanilla";
+	};
 
-{[west, _x] call BIS_fnc_addRespawnInventory;}forEach (_loadoutSet select 0);
-{[east, _x] call BIS_fnc_addRespawnInventory;}forEach (_loadoutSet select 1);
+	default {
+		_eastUniform = ((missionNamespace getVariable "eastUniformDefinitions") select (("EastUniformSet" call BIS_fnc_getParamValue)-1));
+		switch (true) do {
+			//Default back to vanilla uniforms if the selected uniform's mods are not enabled
+			case (_eastUniform select 0 == "RHS"): {
+				if (!(isClass(configFile >> "CfgPatches" >> "rhs_main")) || !(isClass(configFile >> "CfgPatches" >> "rhsusf_main"))) then {
+					_eastUniform == "Vanilla";
+				};
+			};
+			case (_eastUniform select 0 == "Apex"): {
+				if ("ApexWeapons" call BIS_fnc_getParamValue == 1) then {
+					_eastUniform == "Vanilla";
+				};
+			};
+		};
+	};
+};
+diag_log format ["###UNIFORM OUTPUT: BLU %1, OP %2", _westUniform, _eastUniform];
+missionNamespace setVariable ["westUniform", _westUniform, true];
+missionNamespace setVariable ["eastUniform", _eastUniform, true];
 
 ["init","bull"] call psq_fnc_sectorChange;
 

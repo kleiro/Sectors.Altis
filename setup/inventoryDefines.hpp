@@ -2,19 +2,159 @@
  * @Author: MoarRightRudder 
  * @Date: 2018-03-30 17:11:23 
  * @Last Modified by: MoarRightRudder
- * @Last Modified time: 2018-03-30 17:26:23
+ * @Last Modified time: 2018-04-26 15:56:17
  */
 
 missionNamespace setVariable ["westInventory", [
-	["VB1", "VB2", "VB3", "VB4", "VB5", "VB6"],
-	["DB1", "DB2", "DB3", "DB4", "DB5"],
-	["PB1", "PB2", "PB3", "PB4", "PB5", "PB6", "PB7", "PB8"],
-	["RB1", "RB11", "RB12", "RB13", "RB2", "RB21", "RB3", "RB31", "RB32", "RB33", "RB4", "RB41", "RB42", "RB43", "RB5", "RB51", "RB52", "RB53", "RB6", "RB61"]
+	//Assault
+	[
+		//Vanilla
+		["BAV1","BAV2"],
+		//Apex
+		["BAA1"],
+		//RHS
+		["BAR1","BAR2"],
+		//CUP
+		[],
+		//Pistols Only
+		[],
+		//RHS Pistols Only
+		[],
+		//CUP Pistols Only
+		[]
+	],
+	//SpecOps
+	[
+		//Vanilla
+		["BOV1","BOV2"],
+		//Apex
+		["BOA1"],
+		//RHS
+		["BOR1","BOR2"],
+		//CUP
+		[],
+		//ADR97
+		["BOAd1"]
+	],
+	//Support
+	[
+		//Vanilla
+		["BSV1"],
+		//Apex
+		["BSA1","BSA2"],
+		//RHS
+		["BSR1","BSR2"],
+		//CUP
+		[]
+	],
+	//Engineer
+	[
+		//Vanilla
+		["BEV1"],
+		//Apex
+		["BEA1","BEA2"],
+		//RHS
+		["BER1","BER2"],
+		//CUP
+		[]
+	],
+	//DM
+	[
+		//Vanilla
+		["BDV1"],
+		//Apex
+		["BDA1"],
+		//RHS
+		["BDR1","BDR2","BDR3"],
+		//CUP
+		[]
+	],
+	//Recon
+	[
+		//Vanilla
+		["BRV1"],
+		//Apex
+		[],
+		//RHS
+		["BRR1", "BRR2", "BRR3", "BRR4"],
+		//CUP
+		[]
+	]
 ]];
 
 missionNamespace setVariable ["eastInventory", [
-	["VO1", "VO2", "VO3", "VO4", "VO5", "VO6"],
-	["DO1", "DO2", "DO3", "DO4", "DO5"],
-	["PO1", "PO2", "PO3", "PO4", "PO5", "PO6", "PO7", "PO8"],
-	["RO1", "RO11", "RO2", "RO21", "RO3", "RO31", "RO4", "RO5", "RO51", "RO6"]
+	//Assault
+	[
+		//Vanilla
+		["OAV1", "OAV2"],
+		//Apex
+		["OAA1","OAA2"],
+		//RHS
+		["OAR1","OAR2"],
+		//CUP
+		[],
+		//Pistols Only
+		[],
+		//RHS Pistols Only
+		[],
+		//CUP Pistols Only
+		[]
+	],
+	//SpecOps
+	[
+		//Vanilla
+		["OOV1","OOV2"],
+		//Apex
+		["OOA1"],
+		//RHS
+		["OOR1","OOR2"],
+		//CUP
+		[],
+		//ADR97
+		["OOAd1"]
+	],
+	//Support
+	[
+		//Vanilla
+		["OSV1"],
+		//Apex
+		["OSA1"],
+		//RHS
+		["OSR1","OSR2"],
+		//CUP
+		[]
+	],
+	//Engineer
+	[
+		//Vanilla
+		["OEV1"],
+		//Apex
+		["OEA1","OEA2","OEA3"],
+		//RHS
+		["OER1","OER2"],
+		//CUP
+		[]
+	],
+	//DM
+	[
+		//Vanilla
+		["ODV1"],
+		//Apex
+		["ODA1"],
+		//RHS
+		["ODR1","ODR2"],
+		//CUP
+		[]
+	],
+	//Recon
+	[
+		//Vanilla
+		["ORV1"],
+		//Apex
+		[],
+		//RHS
+		["ORR1","ORR2"],
+		//CUP
+		[]
+	]
 ]];

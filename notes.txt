@@ -2,7 +2,7 @@
  * @Author: MoarRightRudder 
  * @Date: 2018-03-29 14:09:24 
  * @Last Modified by: MoarRightRudder
- * @Last Modified time: 2018-04-01 12:45:53
+ * @Last Modified time: 2018-04-26 15:32:29
  */
 
 
@@ -55,21 +55,4 @@
 
 Each new weapon loadout will have to be added to cfgRespawnInventory, but can be done so with vanilla gear
 
-bluUniformType array =[
-    //ocpCamo
-    [uniform, 
-    [assault headgear, specops headgear, support headgear, etc...],
-    [assault facewear, specops facewear, etc...],
-    [assault vest, specops vest, etc...],
-    [assault backpack, specops backpack, etc...],
-    ], 
-
-    //M81Camo
-    [uniform, 
-    [assault headgear, specops headgear, support headgear, etc...],
-    [assault facewear, specops facewear, etc...],
-    [assault vest, specops vest, etc...],
-    [assault backpack, specops backpack, etc...],
-    ]
-];
 

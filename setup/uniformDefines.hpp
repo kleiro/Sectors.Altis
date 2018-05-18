@@ -1,0 +1,191 @@
+/*
+ * @Author: MoarRightRudder 
+ * @Date: 2018-04-26 15:22:23 
+ * @Last Modified by: MoarRightRudder
+ * @Last Modified time: 2018-04-26 16:25:34
+ */
+//uniformDefines
+//[uniform, vest, headgear, goggles, backpack]
+
+missionNamespace setVariable ["westUniformDefinitions", [
+
+	//Tropic 
+	[
+		//ModName
+		"Apex",
+		//DefaultBackpack
+		"B_AssaultPack_tna_F",
+		//Assault
+		['U_B_T_Soldier_F','V_PlateCarrier2_tna_F','H_HelmetB_Enh_tna_F','G_Combat_Goggles_tna_F',''],
+		//SpecOps
+		['U_B_T_Soldier_AR_F','V_PlateCarrier1_tna_F','H_HelmetB_Light_tna_F','G_Lowprofile','B_AssaultPack_tna_F'],
+		//Support
+		['U_B_T_Soldier_F','V_PlateCarrier1_tna_F','H_HelmetB_tna_F','G_Combat_Goggles_tna_F',''],
+		//Engineer
+		['U_B_T_Soldier_F','V_PlateCarrier1_tna_F','H_HelmetB_Enh_tna_F','G_Lowprofile',''],
+		//DM
+		['U_B_T_Soldier_F','V_PlateCarrier1_tna_F','H_Cap_oli_hs','',''],
+		//Recon
+		['U_B_T_FullGhillie_tna_F','V_Chestrig_rgr','','','']
+	],
+	//M81 Woodland
+	[
+		//ModName
+		"RHS",
+		//DefaultBackpack
+		"B_AssaultPack_rgr",
+		//Assault
+		['rhs_uniform_g3_m81','V_PlateCarrier2_rgr','rhsusf_ach_helmet_M81','G_Combat',''],
+		//SpecOps
+		['rhs_uniform_g3_m81','V_PlateCarrier1_rgr','rhsusf_opscore_bk_pelt','G_Lowprofile','B_AssaultPack_rgr'],
+		//Support
+		['rhs_uniform_g3_m81','V_PlateCarrier1_rgr','rhsusf_ach_helmet_M81','rhsusf_oakley_goggles_ylw',''],
+		//Engineer
+		['rhs_uniform_g3_m81','V_PlateCarrier1_rgr','rhsusf_ach_helmet_M81','rhsusf_oakley_goggles_clr',''],
+		//DM
+		['rhs_uniform_g3_m81','V_PlateCarrier1_rgr','rhs_Booniehat_m81','',''],
+		//Recon
+		['U_B_FullGhillie_sard','V_Chestrig_rgr','','','']
+	],
+	//MARPAT D 
+	[
+		//ModName
+		"RHS",
+		//DefaultBackpack
+		"rhsusf_assault_eagleaiii_coy",
+		//Assault
+		['rhs_uniform_FROG01_d','rhsusf_mbav_Grenadier','rhsusf_mich_helmet_marpatd','rhs_ess_black',''],
+		//SpecOps
+		['rhs_uniform_FROG01_d','rhsusf_mbav_rifleman','rhsusf_opscore_mar_ut_pelt','rhsusf_shemagh2_gogg_tan','rhsusf_falconii_coy'],
+		//Support
+		['rhs_uniform_FROG01_d','rhsusf_mbav_mg','rhsusf_mich_helmet_marpatd','rhs_ess_black',''],
+		//Engineer
+		['rhs_uniform_FROG01_d','rhsusf_mbav_rifleman','rhsusf_mich_helmet_marpatd','rhs_ess_black',''],
+		//DM
+		['rhs_uniform_FROG01_d','rhsusf_mbav_light','rhs_8point_marpatd','rhs_googles_clear',''],
+		//Recon
+		['U_B_FullGhillie_ard','V_Chestrig_khk','','','']
+	],
+	//MARPAT WD
+	[
+		//ModName
+		"RHS",
+		//DefaultBackpack
+		"rhsusf_assault_eagleaiii_coy",
+		//Assault
+		['rhs_uniform_FROG01_wd','rhsusf_mbav_Grenadier','rhsusf_mich_helmet_marpatwd','rhs_ess_black',''],
+		//SpecOps
+		['rhs_uniform_FROG01_wd','rhsusf_mbav_rifleman','rhsusf_opscore_mar_fg_pelt','rhsusf_shemagh2_gogg_grn','rhsusf_falconii_coy'],
+		//Support
+		['rhs_uniform_FROG01_wd','rhsusf_mbav_mg','rhsusf_mich_helmet_marpatwd','rhs_ess_black',''],
+		//Engineer
+		['rhs_uniform_FROG01_wd','rhsusf_mbav_rifleman','rhsusf_mich_helmet_marpatwd','rhs_ess_black',''],
+		//DM
+		['rhs_uniform_FROG01_wd','rhsusf_mbav_light','rhs_8point_marpatwd','rhs_googles_clear',''],
+		//Recon
+		['U_B_FullGhillie_lsh','V_Chestrig_rgr','','','']
+	],
+	//Camo 
+	[
+		//ModName
+		"",
+		//DefaultBackpack
+		"",
+		//Assault
+		[],
+		//SpecOps
+		[],
+		//Support
+		[],
+		//Engineer
+		[],
+		//DM
+		[],
+		//Recon
+		[]
+	]
+
+], true];
+
+missionNamespace setVariable ["eastUniformDefinitions", [
+	//Tropic 
+	[
+		//ModName
+		"Apex",
+		//DefaultBackpack
+		"B_FieldPack_ghex_F",
+		//Assault
+		['U_O_T_Soldier_F','V_HarnessOGL_ghex_F','H_HelmetLeaderO_ghex_F','',''],
+		//SpecOps
+		['U_O_T_Soldier_F','V_HarnessOGL_ghex_F','H_HelmetSpecO_ghex_F','','B_FieldPack_ghex_F'],
+		//Support
+		['U_O_T_Soldier_F','V_HarnessO_ghex_F','H_HelmetO_ghex_F','',''],
+		//Engineer
+		['U_O_T_Soldier_F','V_HarnessO_ghex_F','H_HelmetLeaderO_ghex_F','',''],
+		//DM
+		['U_O_T_Soldier_F','V_HarnessO_ghex_F','H_MilCap_ghex_F','',''],
+		//Recon
+		['U_O_T_FullGhillie_tna_F','V_HarnessO_ghex_F','','','']
+	],
+	//Urban
+	[
+		//ModName
+		"Vanilla",
+		//DefaultBackpack
+		"B_FieldPack_oucamo",
+		//Assault
+		['U_O_CombatUniform_oucamo','V_HarnessOGL_gry','H_HelmetLeaderO_oucamo','',''],
+		//SpecOps
+		['U_O_CombatUniform_oucamo','V_HarnessOGL_gry','H_HelmetSpecO_blk','','B_FieldPack_oucamo'],
+		//Support
+		['U_O_CombatUniform_oucamo','V_HarnessO_gry','H_HelmetSpecO_blk','',''],
+		//Engineer
+		['U_O_CombatUniform_oucamo','V_HarnessO_gry','H_HelmetLeaderO_oucamo','',''],
+		//DM
+		['U_O_CombatUniform_oucamo','V_HarnessO_gry','H_MilCap_gry','',''],
+		//Recon
+		['U_O_FullGhillie_sard','V_HarnessO_gry','','','']
+	],
+	//Camo 
+	[
+		//ModName
+		"",
+		//DefaultBackpack
+		"",
+		//Assault
+		[],
+		//SpecOps
+		[],
+		//Support
+		[],
+		//Engineer
+		[],
+		//DM
+		[],
+		//Recon
+		[]
+	]
+], true];
+
+
+/*
+//Camo 
+	[
+		//ModName
+		"",
+		//DefaultBackpack
+		"",
+		//Assault
+		[],
+		//SpecOps
+		[],
+		//Support
+		[],
+		//Engineer
+		[],
+		//DM
+		[],
+		//Recon
+		[]
+	]
+*/
