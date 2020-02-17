@@ -43,7 +43,7 @@ if(count _ownedTriggers > 0) then {
 switch (true) do {
 	case (!(isNil "_slDistance") && {!(isNil "_closestTriggerDistance")} && {_slDistance < _closestTriggerDistance}): {
 		_spawnPos = [getPos (leader _unit), 0, 15, 4, 0, .6, 0, [], []] call BIS_fnc_findSafePos;
-		diag_log format ["$$$ RESPAWN 1: %1 @ %2", _unit, _spawnPos];
+		//diag_log format ["$$$ RESPAWN 1: %1 @ %2", _unit, _spawnPos];
 	};
 	case (!(isNil "_closestTriggerDistance")): {
 		_spawnPos = [0,0];
@@ -60,7 +60,7 @@ switch (true) do {
 			};
 		};
 		*/
-		diag_log format ["$$$ RESPAWN 2: %1 @ %2", _unit, _spawnPos];
+		//diag_log format ["$$$ RESPAWN 2: %1 @ %2", _unit, _spawnPos];
 	};
 	default {
 		if(side _unit == west) then {
@@ -68,13 +68,13 @@ switch (true) do {
 			while {_spawnPos isEqualTo [0,0]} do {
 				_spawnPos = [[["bluBase"],["water"]] call bis_fnc_randomPos, 0, 10, 2, 0, 1.0, 0, [],[0,0]] call BIS_fnc_findSafePos;
 			};
-			diag_log format ["$$$ RESPAWN 3: %1 @ %2", _unit, _spawnPos];
+			//diag_log format ["$$$ RESPAWN 3: %1 @ %2", _unit, _spawnPos];
 		} else {
 		_spawnPos = [0,0];
 			while {_spawnPos isEqualTo [0,0]} do {
 				_spawnPos = [[["redBase"],["water"]] call bis_fnc_randomPos, 0, 10, 2, 0, 1.0, 0, [],[0,0]] call BIS_fnc_findSafePos;
 			};
-			diag_log format ["$$$ RESPAWN 4: %1 @ %2", _unit, _spawnPos];
+			//diag_log format ["$$$ RESPAWN 4: %1 @ %2", _unit, _spawnPos];
 		};
 	};
 };

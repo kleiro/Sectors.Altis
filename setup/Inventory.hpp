@@ -43,7 +43,7 @@ class CfgRespawnInventory {
 			uniformClass = "U_B_CombatUniform_mcam";
 		};
 
-		//F2000
+			//F2000
 			class BAV2 { 
 			displayName = "F2000";
 			role = "Assault";

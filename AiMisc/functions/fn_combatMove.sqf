@@ -10,7 +10,7 @@
 
 params ["_unit","_cover","_moveDistance","_hideDir"];
 
-diag_log format["^^^ Running combatMove for %1", _unit];
+//diag_log format["^^^ Running combatMove for %1", _unit];
 
 //Determine if enemies are near the unit
 _nearestEnemy = _unit findNearestEnemy _unit;

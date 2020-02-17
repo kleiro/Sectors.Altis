@@ -9,7 +9,7 @@
 //The majority of this script was repurposed from his Vcom AI
 
 params ["_unit","_cover","_movePosition","_hideDir"];
-diag_log format["^^^ Running defensiveCover for %1", _unit];
+//diag_log format["^^^ Running defensiveCover for %1", _unit];
 
 _nearestEnemy = _unit findNearestEnemy _unit;
 
