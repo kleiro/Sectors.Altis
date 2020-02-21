@@ -1,15 +1,16 @@
 /*
  * @Author: MoarRightRudder 
  * @Date: 2018-03-29 14:36:09 
- * @Last Modified by: MoarRightRudder
- * @Last Modified time: 2018-03-31 10:33:01
+ * @Last Modified by: mikey.zhaopeng
+ * @Last Modified time: 2020-02-19 21:41:30
  */
 
-class setupFunctions {
+class baseFunctions {
 	tag = "PSQ";
 	class functions {
 		file = "setup\functions";
 		class fsmLoop;
+		class sectorOwnerChange;
 		class setup;
 		class startParams;
 	};

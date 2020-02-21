@@ -84,7 +84,7 @@ class Params{
 };
 
 class CfgFunctions {
-	#include "setup\setupCfgFunctions.hpp"
+	#include "base\baseCfgFunctions.hpp"
 	#include "aiMisc\aiMiscCfgFunctions.hpp"
 	#include "fsm\fsmCfgFunctions.hpp"
 };
@@ -106,4 +106,4 @@ class CfgRemoteExec {
 	};
 };
 
-#include "setup\Inventory.hpp"
+#include "base\Inventory.hpp"

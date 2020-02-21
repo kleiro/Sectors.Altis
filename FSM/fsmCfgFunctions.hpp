@@ -18,5 +18,8 @@ class fsmFunctions {
 		class unitMove {
 			ext = ".fsm";
 		};
+		class respawnProcess {
+			ext = ".fsm";
+		};
 	};
 };

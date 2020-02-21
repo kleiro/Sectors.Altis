@@ -9,17 +9,9 @@
 params ["_unit","_class"];
 switch (isPlayer _unit) do {
 	case false : {
-
-		_class = selectRandom ["A","O","S","E","D","R"];
-		_sideInventory = [];
-		{
-			if((_x select [1,1]) == _class)then{_sideInventory pushBack _x;};
-		}forEach (missionNamespace getVariable ((str(side _unit)) + "loadout"));
-		
-		_loadout = selectRandom _sideInventory;
-
+		_class = floor(random 7);
+		_loadout = selectRandom ((missionNamespace getVariable ((str(side _unit)) + "loadout")) select _class)
 		[_unit, missionConfigFile >> "CfgRespawnInventory" >> _loadout] call BIS_fnc_loadInventory;
-		_class = ["A","O","S","E","D","R"] find _class;
 	};
 
 	case true : {

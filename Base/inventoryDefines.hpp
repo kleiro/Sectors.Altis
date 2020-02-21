@@ -26,15 +26,13 @@ missionNamespace setVariable ["westInventory", [
 	//SpecOps
 	[
 		//Vanilla
-		["BOV1","BOV2"],
+		["BOV1","BOV2", "BOV3"],
 		//Apex
 		["BOA1"],
 		//RHS
 		["BOR1","BOR2"],
 		//CUP
-		[],
-		//ADR97
-		["BOAd1"]
+		[]
 	],
 	//Support
 	[

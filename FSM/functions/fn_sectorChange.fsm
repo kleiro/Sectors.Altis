@@ -1,4 +1,4 @@
-/*%FSM<COMPILE "F:\Steam\steamapps\common\Arma 3 Tools\FSMEditor\scriptedFSM.cfg, sectorChange">*/
+/*%FSM<COMPILE "scriptedFSM.cfg, sectorChange">*/
 /*%FSM<HEAD>*/
 /*
 item0[] = {"Init",0,250,-64.127319,269.777924,25.872681,319.777924,0.000000,"Init"};
@@ -29,7 +29,7 @@ item24[] = {"Defensive",4,218,460.050476,-948.721497,550.050476,-898.721191,40.0
 item25[] = {"Set_Objective",2,250,-189.490082,-696.064087,-99.490082,-646.064148,0.000000,"Set Objective"};
 item26[] = {"Get_Triggers",2,250,-872.216919,-872.733154,-782.216919,-822.733032,0.000000,"Get" \n "Triggers"};
 item27[] = {"Unowned_Triggers",4,218,-1010.002686,-772.731812,-920.002747,-722.731689,10.000000,"Unowned" \n "Triggers"};
-item28[] = {"Enemy_Triggers",4,218,-1130.492920,-769.665833,-1040.493164,-719.665771,5.000000,"Enemy Triggers"};
+item28[] = {"Enemy_Triggers",4,4314,-1130.492920,-769.665833,-1040.493164,-719.665771,5.000000,"Enemy Triggers"};
 item29[] = {"No_Triggers",8,218,-893.835999,-772.378052,-803.835999,-722.378052,0.000000,"No" \n "Triggers"};
 item30[] = {"Set_Objective_1",2,250,-1006.372620,-698.378845,-916.372620,-648.378601,0.000000,"Set Objective"};
 item31[] = {"Time__to_Wait",2,250,-1141.292969,-688.028748,-1051.292969,-638.028748,0.000000,"Time " \n "to" \n "Wait"};
@@ -51,7 +51,7 @@ item46[] = {"Set_Objective_5",2,250,-672.819214,-699.050781,-582.819214,-649.050
 item47[] = {"Delete_Group_From",2,250,-306.115692,-268.614105,-216.115692,-218.614105,0.000000,"Delete Group" \n "From Affected" \n "Groups Array"};
 item48[] = {"Continue",8,218,-186.030090,-270.483032,-96.029999,-220.483002,0.000000,"Continue"};
 item49[] = {"Strategic",4,218,304.879822,-905.647400,394.879822,-855.647400,20.000000,"Strategic"};
-item50[] = {"Defensive_BackTr",4,4314,176.736115,-902.413879,266.736115,-852.413513,50.000000,"Defensive" \n "BackTrack"};
+item50[] = {"Defensive_BackTr",4,218,176.736115,-902.413879,266.736115,-852.413513,50.000000,"Defensive" \n "BackTrack"};
 item51[] = {"Set_Objective_6",2,250,58.137222,-695.018005,148.137207,-645.018066,0.000000,"Set Objective"};
 item52[] = {"Get_Triggers_1",2,250,762.686523,-871.957764,852.686523,-821.957642,0.000000,"Get" \n "Triggers"};
 item53[] = {"Unowned_Triggers",4,218,802.430298,-772.965576,892.430298,-722.965454,10.000000,"Unowned" \n "Triggers"};
@@ -232,8 +232,8 @@ link125[] = {98,99};
 link126[] = {99,39};
 link127[] = {100,101};
 link128[] = {101,65};
-globals[] = {0.000000,0,0,0,0,640,480,3,159,6316128,1,-426.984741,369.101624,-305.627563,-1023.392517,742,669,1};
-window[] = {0,-1,-1,-1,-1,971,-1790,-67,130,1,760};
+globals[] = {0.000000,0,0,0,0,640,480,3,159,6316128,1,-1318.130859,-187.199341,-117.579826,-1171.156250,731,681,1};
+window[] = {0,-1,-1,-1,-1,824,0,1536,-29,1,749};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -828,7 +828,7 @@ class FSM
                         itemno = 37;
                         init = /*%FSM<STATEINIT""">*/"_objective = [missionNamespace getVariable ""triggers"", [], {_x distance (getMarkerPos ""redBase"")}, ""ascend"", {true}] call bis_fnc_sortBy;" \n
                          "_group setVariable[""objective"", _objective select 1, true];" \n
-                         "diag_log format[""### strat output 3: %1, %2"", _group, _objective];"/*%FSM</STATEINIT""">*/;
+                         "//diag_log format[""### strat output 3: %1, %2"", _group, _objective];"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {

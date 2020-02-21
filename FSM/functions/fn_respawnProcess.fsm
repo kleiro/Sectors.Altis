@@ -1,0 +1,465 @@
+/*%FSM<COMPILE "C:\Program Files (x86)\Steam\steamapps\common\Arma 3 Tools\FSMEditor\scriptedFSM.cfg, respawnProcess">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"Init",0,250,-40.698914,-142.741943,49.301086,-92.741943,0.000000,"Init"};
+item1[] = {"Player",4,218,-174.139221,-267.167175,-84.139221,-217.167175,100.000000,"Player"};
+item2[] = {"AI__Squad_Lead",4,218,151.665161,-234.341339,272.727356,-171.916473,50.000000,"AI " \n "Squad Lead"};
+item3[] = {"AI",8,218,383.927490,-142.285461,473.927490,-92.285461,0.000000,"AI"};
+item4[] = {"SL_Distance_From",2,250,382.685547,-272.104401,472.685547,-222.104370,0.000000,"SL Distance" \n "From Objective"};
+item5[] = {"Continue",8,218,380.966614,-379.724091,470.966614,-329.724091,0.000000,"Continue"};
+item6[] = {"Get_Available_Spawn",2,4346,168.978027,-380.200500,258.978027,-330.200500,0.000000,"Get Available" \n "Spawn Points"};
+item7[] = {"Spawn_Points___0",4,218,362.805786,-509.419006,490.080322,-451.964081,100.000000,"Spawn Points > 0"};
+item8[] = {"No_Spawn_Points",8,218,150.340820,-551.916565,272.645447,-498.189148,0.000000,"No Spawn Points"};
+item9[] = {"Closest_Spawn_to",2,250,570.300842,-506.934021,660.300842,-456.934021,0.000000,"Closest Spawn" \n "to" \n "Objective"};
+item10[] = {"Spawn_on_SL",4,218,561.603394,-610.060303,666.513184,-551.362915,100.000000,"Spawn on SL"};
+item11[] = {"Spawn_at_SL",2,250,566.573303,-712.064819,656.573303,-662.064819,0.000000,"Spawn" \n "at" \n "SL"};
+item12[] = {"Spawn_on_Point",8,218,373.988159,-610.060364,486.352844,-546.393005,50.000000,"Spawn on Point"};
+item13[] = {"Spawn_at_Point",2,250,383.928040,-709.579956,473.928040,-659.579956,0.000000,"Spawn" \n "at" \n "Point"};
+item14[] = {"Spawn_at_Base",2,250,166.493073,-708.337524,256.493103,-658.337524,0.000000,"Spawn" \n "at" \n "Base"};
+item15[] = {"Continue",8,218,384.872192,-810.950256,474.872192,-760.950256,0.000000,"Continue"};
+item16[] = {"Set_Loadout",2,250,163.871460,-920.963806,253.871460,-870.963867,0.000000,"Set Loadout"};
+item17[] = {"Continue",8,218,-10.523865,-920.963745,79.476135,-870.963745,0.000000,"Continue"};
+item18[] = {"Set_Uniform",2,250,-174.395203,-922.467224,-84.395203,-872.467224,0.000000,"Set Uniform"};
+item19[] = {"Class_from_Player",2,250,-172.891785,-485.600525,-82.891785,-435.600525,0.000000,"Class from" \n "Player" \n "Selection"};
+item20[] = {"Continue",8,218,-174.395203,-676.533203,-84.395203,-626.533203,0.000000,"Continue"};
+item21[] = {"Continue",8,218,-11.191895,-1017.686218,78.808105,-967.686279,0.000000,"Continue"};
+item22[] = {"Spawn_Protection",2,250,-11.301758,-1151.099854,78.698257,-1101.099854,0.000000,"Spawn" \n "Protection"};
+item23[] = {"Wait",4,218,-12.728699,-1248.831787,77.271301,-1198.831787,0.000000,"Wait"};
+item24[] = {"End",1,250,-14.758667,-1343.916992,75.241364,-1293.916992,0.000000,"End"};
+item25[] = {"Continue",8,218,166.564209,-812.669189,256.564209,-762.669189,0.000000,"Continue"};
+item26[] = {"Continue",8,218,563.644043,-810.950256,653.644043,-760.950256,0.000000,"Continue"};
+link0[] = {0,1};
+link1[] = {0,2};
+link2[] = {0,3};
+link3[] = {1,19};
+link4[] = {2,6};
+link5[] = {3,4};
+link6[] = {4,5};
+link7[] = {5,6};
+link8[] = {6,7};
+link9[] = {6,8};
+link10[] = {7,9};
+link11[] = {8,14};
+link12[] = {9,10};
+link13[] = {9,12};
+link14[] = {10,11};
+link15[] = {11,26};
+link16[] = {12,13};
+link17[] = {13,15};
+link18[] = {14,25};
+link19[] = {15,16};
+link20[] = {16,17};
+link21[] = {17,18};
+link22[] = {18,21};
+link23[] = {19,20};
+link24[] = {20,18};
+link25[] = {21,22};
+link26[] = {22,23};
+link27[] = {23,24};
+link28[] = {25,16};
+link29[] = {26,16};
+globals[] = {0.000000,0,0,0,0,640,480,1,42,6316128,1,-463.254700,1205.855957,-84.229004,-1232.494629,971,668,1};
+window[] = {2,-1,-1,-32000,-32000,853,-4,1532,0,3,989};
+*//*%FSM</HEAD>*/
+class FSM
+{
+        fsmName = "respawnProcess";
+        class States
+        {
+                /*%FSM<STATE "Init">*/
+                class Init
+                {
+                        name = "Init";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/"params [""_unit""]" \n
+                         "_side = side _unit" \n
+                         "_group = _unit getVariable ""group"";" \n
+                         "_currentObjective = _group getVariable ""objective"";" \n
+                         "" \n
+                         "_unit allowDamage false;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Player">*/
+                                class Player
+                                {
+                                        itemno = 1;
+                                        priority = 100.000000;
+                                        to="Class_from_Player";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"isPlayer _unit"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "AI__Squad_Lead">*/
+                                class AI__Squad_Lead
+                                {
+                                        itemno = 2;
+                                        priority = 50.000000;
+                                        to="Get_Available_Spawn";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"leader _unit == _unit"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "AI">*/
+                                class AI
+                                {
+                                        itemno = 3;
+                                        priority = 0.000000;
+                                        to="SL_Distance_From";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "SL_Distance_From">*/
+                class SL_Distance_From
+                {
+                        name = "SL_Distance_From";
+                        itemno = 4;
+                        init = /*%FSM<STATEINIT""">*/"_slDistance = (leader _unit) distance _currentObjective;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Continue">*/
+                                class Continue
+                                {
+                                        itemno = 5;
+                                        priority = 0.000000;
+                                        to="Get_Available_Spawn";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Get_Available_Spawn">*/
+                class Get_Available_Spawn
+                {
+                        name = "Get_Available_Spawn";
+                        itemno = 6;
+                        init = /*%FSM<STATEINIT""">*/"_ownedSectors = [];" \n
+                         "" \n
+                         "switch (_side) do {" \n
+                         "	case west: {" \n
+                         "		{" \n
+                         "			_ownedSectors pushBackUnique (_x getVariable ""sectorArea"");" \n
+                         "		}forEach missionNamespace getVariable ""bluOwned"";" \n
+                         "	};" \n
+                         "	case east: {" \n
+                         "		{	" \n
+                         "			_ownedSectors pushBackUnique (_x getVariable ""sectorArea"");" \n
+                         "		}forEach missionNamespace getVariable ""opfOwned"";" \n
+                         "	};" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Spawn_Points___0">*/
+                                class Spawn_Points___0
+                                {
+                                        itemno = 7;
+                                        priority = 100.000000;
+                                        to="Closest_Spawn_to";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(count _ownedSectors) > 0"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "No_Spawn_Points">*/
+                                class No_Spawn_Points
+                                {
+                                        itemno = 8;
+                                        priority = 0.000000;
+                                        to="Spawn_at_Base";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Closest_Spawn_to">*/
+                class Closest_Spawn_to
+                {
+                        name = "Closest_Spawn_to";
+                        itemno = 9;
+                        init = /*%FSM<STATEINIT""">*/"_closestSector = ([_ownedSectors, [], {_x distance _currentObjective}, ""ascend"", {true}] call bis_fnc_sortBy) select 0;" \n
+                         "_closestSectorDistance = _closestSector distance _currentObjective;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Spawn_on_SL">*/
+                                class Spawn_on_SL
+                                {
+                                        itemno = 10;
+                                        priority = 100.000000;
+                                        to="Spawn_at_SL";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(isNil ""_slDistance"") && {!(isNil ""_closestSectorDistance"")} && {_slDistance < _closestSectorDistance}"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Spawn_on_Point">*/
+                                class Spawn_on_Point
+                                {
+                                        itemno = 12;
+                                        priority = 50.000000;
+                                        to="Spawn_at_Point";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Spawn_at_SL">*/
+                class Spawn_at_SL
+                {
+                        name = "Spawn_at_SL";
+                        itemno = 11;
+                        init = /*%FSM<STATEINIT""">*/"_spawnPos = [getPos (leader _unit), 0, 15, 4, 0, .6, 0, [], []] call BIS_fnc_findSafePos;" \n
+                         "diag_log format [""$$$ RESPAWN 1: %1 @ %2"", _unit, _spawnPos];" \n
+                         "_unit setPos _spawnPos;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Continue">*/
+                                class Continue
+                                {
+                                        itemno = 26;
+                                        priority = 0.000000;
+                                        to="Set_Loadout";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Spawn_at_Point">*/
+                class Spawn_at_Point
+                {
+                        name = "Spawn_at_Point";
+                        itemno = 13;
+                        init = /*%FSM<STATEINIT""">*/"_spawnPos = [0,0];" \n
+                         "while {_spawnPos isEqualTo [0,0]} do {" \n
+                         "	_spawnPos = [[[_closestSector],[""water""]] call bis_fnc_randomPos, 0, 10, 2, 0, 1.0, 0, [],[0,0]] call BIS_fnc_findSafePos;" \n
+                         "};" \n
+                         "_unit setPos _spawnPos;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Continue">*/
+                                class Continue
+                                {
+                                        itemno = 15;
+                                        priority = 0.000000;
+                                        to="Set_Loadout";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Spawn_at_Base">*/
+                class Spawn_at_Base
+                {
+                        name = "Spawn_at_Base";
+                        itemno = 14;
+                        init = /*%FSM<STATEINIT""">*/"if(side _unit == west) then {" \n
+                         "	_spawnPos = [0,0];" \n
+                         "	while {_spawnPos isEqualTo [0,0]} do {" \n
+                         "		_spawnPos = [[[""bluBase""],[""water""]] call bis_fnc_randomPos, 0, 10, 2, 0, 1.0, 0, [],[0,0]] call BIS_fnc_findSafePos;" \n
+                         "	};" \n
+                         "	diag_log format [""$$$ RESPAWN 3: %1 @ %2"", _unit, _spawnPos];" \n
+                         "} else {" \n
+                         "	_spawnPos = [0,0];" \n
+                         "	while {_spawnPos isEqualTo [0,0]} do {" \n
+                         "		_spawnPos = [[[""redBase""],[""water""]] call bis_fnc_randomPos, 0, 10, 2, 0, 1.0, 0, [],[0,0]] call BIS_fnc_findSafePos;" \n
+                         "	};" \n
+                         "	diag_log format [""$$$ RESPAWN 4: %1 @ %2"", _unit, _spawnPos];" \n
+                         "};" \n
+                         "_unit setPos _spawnPos;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Continue">*/
+                                class Continue
+                                {
+                                        itemno = 25;
+                                        priority = 0.000000;
+                                        to="Set_Loadout";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Set_Loadout">*/
+                class Set_Loadout
+                {
+                        name = "Set_Loadout";
+                        itemno = 16;
+                        init = /*%FSM<STATEINIT""">*/"_class = _unit getVariable ""class"";" \n
+                         "_loadout = selectRandom ((missionNamespace getVariable ((str(side _unit)) + ""loadout"")) select _class)" \n
+                         "[_unit, missionConfigFile >> ""CfgRespawnInventory"" >> _loadout] call BIS_fnc_loadInventory;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Continue">*/
+                                class Continue
+                                {
+                                        itemno = 17;
+                                        priority = 0.000000;
+                                        to="Set_Uniform";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Set_Uniform">*/
+                class Set_Uniform
+                {
+                        name = "Set_Uniform";
+                        itemno = 18;
+                        init = /*%FSM<STATEINIT""">*/"_uniformSet = (missionNamespace getVariable ((str (side _unit))+""Uniform""));" \n
+                         "" \n
+                         "if(!(_uniformSet isEqualTo ""Vanilla"") && _class >= 0) then {" \n
+                         "	_uniform = _uniformSet select (_class + 2);" \n
+                         "	diag_log format [""###setloadout: class %1, uniform: %2"", _class, _uniform];" \n
+                         "	//Get items in unit's inventory" \n
+                         "	_items = uniformItems _unit;" \n
+                         "	_items append (vestItems _unit);" \n
+                         "	_items append (backpackItems _unit);" \n
+                         "" \n
+                         "	//Add the new uniform, vest, headgear, facewear to unit" \n
+                         "	_unit addUniform (_uniform select 0);" \n
+                         "	_unit addVest (_uniform select 1);" \n
+                         "	_unit addHeadgear (_uniform select 2);" \n
+                         "	_unit addGoggles (_uniform select 3);" \n
+                         "	_unit addBackpack (_uniform select 4);" \n
+                         "" \n
+                         "	for ""_i"" from 0 to (count _items) do {" \n
+                         "		if(_unit canAdd (_items select 0)) then {" \n
+                         "			_unit addItem (_items select 0);" \n
+                         "			_items deleteAt 0;" \n
+                         "		} else {" \n
+                         "			_items pushBack (_items select 0);" \n
+                         "			_items deleteAt 0;" \n
+                         "		};" \n
+                         "	};" \n
+                         "" \n
+                         "	if((count _items) > 0 && (backpack _unit) != """") then {" \n
+                         "		_unit addBackpack (_uniformSet select 1);" \n
+                         "		{" \n
+                         "			if(_unit canAdd (_items select 0)) then {" \n
+                         "				_unit addItem (_items select 0);" \n
+                         "			};" \n
+                         "		}forEach _items;" \n
+                         "	};" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Continue">*/
+                                class Continue
+                                {
+                                        itemno = 21;
+                                        priority = 0.000000;
+                                        to="Spawn_Protection";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Class_from_Player">*/
+                class Class_from_Player
+                {
+                        name = "Class_from_Player";
+                        itemno = 19;
+                        init = /*%FSM<STATEINIT""">*/"disableSerialization;" \n
+                         "_classArray = [""Assault"",""SpecOps"",""Support"",""Engineer"",""DM"",""Recon""];" \n
+                         "_rList = uiNamespace getVariable ([""BIS_RscRespawnControlsMap_ctrlRoleList"", ""BIS_RscRespawnControlsSpectate_ctrlRoleList""] select (uiNamespace getVariable [""BIS_RscRespawnControlsSpectate_shown"", false]));" \n
+                         "_rName = _rList lbText (lbCurSel _rList);" \n
+                         "_class = _classArray find _rName;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Continue">*/
+                                class Continue
+                                {
+                                        itemno = 20;
+                                        priority = 0.000000;
+                                        to="Set_Uniform";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Spawn_Protection">*/
+                class Spawn_Protection
+                {
+                        name = "Spawn_Protection";
+                        itemno = 22;
+                        init = /*%FSM<STATEINIT""">*/"_wait = diag_tickTime + 6;" \n
+                         "_spawnPos = getpos _unit;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Wait">*/
+                                class Wait
+                                {
+                                        itemno = 23;
+                                        priority = 0.000000;
+                                        to="End";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"diag_tickTime > _wait || (_unit distance _spawnPos) > 3"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "End">*/
+                class End
+                {
+                        name = "End";
+                        itemno = 24;
+                        init = /*%FSM<STATEINIT""">*/"_unit allowDamage true;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+        };
+        initState="Init";
+        finalStates[] =
+        {
+                "End",
+        };
+};
+/*%FSM</COMPILE>*/

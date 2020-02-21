@@ -110,7 +110,6 @@ class CfgRespawnInventory {
 			backpack = "B_AssaultPack_rgr";
 			uniformClass = "U_B_CombatUniform_mcam_tshirt";
 		};
-
 			//MP7
 			class BOV2 { 
 			displayName = "MP7";
@@ -123,6 +122,19 @@ class CfgRespawnInventory {
 			backpack = "B_AssaultPack_rgr";
 			uniformClass = "U_B_CombatUniform_mcam_tshirt";
 		};
+			//P90
+			class BOV3 { 
+			displayName = "P90";
+			role = "SpecOps";
+
+			weapons[] = {"SMG_03C_TR_black", "hgun_Pistol_heavy_01_F", "Throw", "Put"};
+			magazines[] = {"11Rnd_45ACP_Mag", "11Rnd_45ACP_Mag", "50Rnd_570x28_SMG_03", "50Rnd_570x28_SMG_03", "50Rnd_570x28_SMG_03", "50Rnd_570x28_SMG_03", "50Rnd_570x28_SMG_03", "50Rnd_570x28_SMG_03", "50Rnd_570x28_SMG_03", "50Rnd_570x28_SMG_03", "MiniGrenade", "MiniGrenade", "SmokeShell", "SmokeShell", "DemoCharge_Remote_Mag", "DemoCharge_Remote_Mag", "DemoCharge_Remote_Mag", "DemoCharge_Remote_Mag", "50Rnd_570x28_SMG_03", "11Rnd_45ACP_Mag"};
+			items[] = {"FirstAidKit", "FirstAidKit", "FirstAidKit", "FirstAidKit", "FirstAidKit"};
+			linkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemRadio", "ItemGPS", "NVGoggles_OPFOR", "Binocular", "muzzle_snds_570", "acc_pointer_IR", "optic_Aco_smg", "", "", "", "", "", "muzzle_snds_acp", "", "optic_MRD", "", "V_PlateCarrier1_rgr", "H_HelmetB_light_black", "G_Lowprofile"};
+			backpack = "B_AssaultPack_rgr";
+			uniformClass = "U_B_CombatUniform_mcam_tshirt";
+		};
+
 		//Apex
 			//MP5
 			class BOA1 { 
@@ -136,6 +148,7 @@ class CfgRespawnInventory {
 			backpack = "B_AssaultPack_rgr";
 			uniformClass = "U_B_CombatUniform_mcam_tshirt";
 		};
+
 		//RHS
 			//M4A1
 			class BOR1 { 
@@ -161,19 +174,7 @@ class CfgRespawnInventory {
 			backpack = "B_AssaultPack_rgr";
 			uniformClass = "U_B_CombatUniform_mcam_tshirt";
 		};
-		//ADR97
-			//P90
-			class BOAd1 { 
-			displayName = "P90";
-			role = "SpecOps";
 
-			weapons[] = {"SMG_03C_TR_black", "hgun_Pistol_heavy_01_F", "Throw", "Put"};
-			magazines[] = {"11Rnd_45ACP_Mag", "11Rnd_45ACP_Mag", "50Rnd_570x28_SMG_03", "50Rnd_570x28_SMG_03", "50Rnd_570x28_SMG_03", "50Rnd_570x28_SMG_03", "50Rnd_570x28_SMG_03", "50Rnd_570x28_SMG_03", "50Rnd_570x28_SMG_03", "50Rnd_570x28_SMG_03", "MiniGrenade", "MiniGrenade", "SmokeShell", "SmokeShell", "DemoCharge_Remote_Mag", "DemoCharge_Remote_Mag", "DemoCharge_Remote_Mag", "DemoCharge_Remote_Mag", "50Rnd_570x28_SMG_03", "11Rnd_45ACP_Mag"};
-			items[] = {"FirstAidKit", "FirstAidKit", "FirstAidKit", "FirstAidKit", "FirstAidKit"};
-			linkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch", "ItemRadio", "ItemGPS", "NVGoggles_OPFOR", "Binocular", "muzzle_snds_570", "acc_pointer_IR", "optic_Aco_smg", "", "", "", "", "", "muzzle_snds_acp", "", "optic_MRD", "", "V_PlateCarrier1_rgr", "H_HelmetB_light_black", "G_Lowprofile"};
-			backpack = "B_AssaultPack_rgr";
-			uniformClass = "U_B_CombatUniform_mcam_tshirt";
-		};
 	//Support
 		//Vanilla
 			//Mk200

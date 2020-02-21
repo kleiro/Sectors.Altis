@@ -1,0 +1,114 @@
+/*%FSM<COMPILE "C:\Program Files (x86)\Steam\steamapps\common\Arma 3 Tools\FSMEditor\scriptedFSM.cfg, aggressiveGroup">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"Init",0,250,-784.514709,-656.217712,-694.514709,-606.217712,0.000000,"Init"};
+item1[] = {"NA",8,218,-921.259949,-655.212280,-831.259949,-605.212280,0.000000,"NA"};
+item2[] = {"Group_Valid",4,218,-785.873230,-749.727356,-695.873230,-699.727417,100.000000,"Group Valid"};
+item3[] = {"End",1,250,-1147.329956,-655.212158,-1057.329956,-605.212158,0.000000,"End"};
+item4[] = {"Data",2,250,-787.079834,-841.445129,-697.079834,-791.445251,0.000000,"Data"};
+item5[] = {"Objective_swap_",4,4314,-955.717468,-925.077454,-840.225159,-859.781982,100.000000,"Objective swap?"};
+item6[] = {"____FAKE____",9,4196400,0.000000,8546172292628312000000000000000000.000000,0.000000,8546172292628312000000000000000000.000000,0.000000,"____FAKE____"};
+link0[] = {0,1};
+link1[] = {0,2};
+link2[] = {1,3};
+link3[] = {2,4};
+link4[] = {4,5};
+link5[] = {5,6};
+globals[] = {0.000000,0,0,0,0,640,480,3,9,6316128,1,-1374.677490,-130.652832,-496.843506,-1341.094360,976,652,1};
+window[] = {0,-1,-1,-1,-1,824,-4,1552,0,1,994};
+*//*%FSM</HEAD>*/
+class FSM
+{
+        fsmName = "aggressiveGroup";
+        class States
+        {
+                /*%FSM<STATE "Init">*/
+                class Init
+                {
+                        name = "Init";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/"params [""_group""];" \n
+                         "_side = side _group;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Group_Valid">*/
+                                class Group_Valid
+                                {
+                                        itemno = 2;
+                                        priority = 100.000000;
+                                        to="Data";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!isNil _group"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "NA">*/
+                                class NA
+                                {
+                                        itemno = 1;
+                                        priority = 0.000000;
+                                        to="End";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "End">*/
+                class End
+                {
+                        name = "End";
+                        itemno = 3;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Data">*/
+                class Data
+                {
+                        name = "Data";
+                        itemno = 4;
+                        init = /*%FSM<STATEINIT""">*/"_objective = _group getVariable ""objective"""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Objective_swap_">*/
+                                class Objective_swap_
+                                {
+                                        itemno = 5;
+                                        priority = 100.000000;
+                                        to="____FAKE____";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"isNull _objective || "/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "____FAKE____">*/
+                class ____FAKE____
+                {
+                        name = "____FAKE____";
+                        itemno = 6;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+        };
+        initState="Init";
+        finalStates[] =
+        {
+                "End",
+        };
+};
+/*%FSM</COMPILE>*/
