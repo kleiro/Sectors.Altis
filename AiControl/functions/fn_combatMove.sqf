@@ -8,7 +8,7 @@
 //Credit goes to genesis92x
 //The majority of this script was repurposed from his Vcom AI
 
-params ["_unit","_cover","_moveDistance","_hideDir"];
+params ["_unit", "_waypointPos","_cover","_moveDistance","_hideDir"];
 
 //diag_log format["^^^ Running combatMove for %1", _unit];
 
@@ -22,7 +22,7 @@ if(!(isNull _nearestEnemy) && {(_nearestEnemy distance _unit)<50}) then {
 };
 
 //Find the position that the unit should move to and look for cover near
-_movePosition = _unit getPos [_moveDistance, (_unit getDir (waypointPosition [group _unit, 0]))];
+_movePosition = _unit getPos [_moveDistance, (_unit getDir _waypointPos)];
 _objectsList = nearestObjects [_movePosition, [], 20];
 _roads = _movePosition nearRoads 20;
 _weakListFinal = [];

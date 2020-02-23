@@ -25,10 +25,9 @@ _Skillset = [
 [1,1,1,.8,.98,1,1,1,1,1]
 ];
 
-bluSkill = _skillset select (["BluDifficulty", 2] call BIS_fnc_getParamValue);
-opfSkill = _skillset select (["OpfDifficulty", 2] call BIS_fnc_getParamValue);
-skillStr = ['aimingAccuracy', 'aimingShake', 'aimingSpeed', 'endurance', 'spotDistance', 'spotTime', 'courage', 'reloadSpeed', 'commanding', 'general'];
-
+missionNamespace setVariable ["bluSkill", _skillset select (["BluDifficulty", 2] call BIS_fnc_getParamValue)];
+missionNamespace setVariable ["opfSkill", _skillset select (["OpfDifficulty", 2] call BIS_fnc_getParamValue)];
+missionNamespace SetVariable ["skillStr", ['aimingAccuracy', 'aimingShake', 'aimingSpeed', 'endurance', 'spotDistance', 'spotTime', 'courage', 'reloadSpeed', 'commanding', 'general']];
 
 //Set Time
 _timeIndx = ["Time", 50] call BIS_fnc_getParamValue;
@@ -111,7 +110,7 @@ _eastLoadouts = [[],[],[],[],[],[]];
 }forEach (missionNamespace getVariable "eastInventory");
 
 //2. Determine if the host wants to disable DLC weapons, otherwise add them
-if("ApexWeapons" call BIS_fnc_getParamValue == 0) then {
+if(("ApexWeapons" call BIS_fnc_getParamValue) == 0) then {
 
 	{
 		(_westLoadouts select _forEachIndex) append (_x select 1);
@@ -143,7 +142,7 @@ if((isClass(configFile >> "CfgPatches" >> "rhs_main")) && (isClass(configFile >>
 }forEach _eastLoadouts;
 
 //Set loadouts
-diag_log format ["###Weapon OUTPUT: BLU %1, OP %2", _westLoadouts, _eastLoadouts];
+//diag_log format ["###Weapon OUTPUT: BLU %1, OP %2", _westLoadouts, _eastLoadouts];
 missionNamespace setVariable ["westLoadout", _westLoadouts, true];
 missionNamespace setVariable ["eastLoadout", _eastLoadouts, true];
 
@@ -157,8 +156,8 @@ switch ("WestUniformSet" call BIS_fnc_getParamValue) do {
 	};
 
 	default {
-		diag_log format["wudefs: %1", (missionNamespace getVariable "westUniformDefinitions")];
-		diag_log format["wuset: %1", ("WestUniformSet" call BIS_fnc_getParamValue)];
+		//diag_log format["wudefs: %1", (missionNamespace getVariable "westUniformDefinitions")];
+		//diag_log format["wuset: %1", ("WestUniformSet" call BIS_fnc_getParamValue)];
 
 		_westUniform = ((missionNamespace getVariable "westUniformDefinitions") select (("WestUniformSet" call BIS_fnc_getParamValue)-1));
 		switch (true) do {
@@ -169,7 +168,7 @@ switch ("WestUniformSet" call BIS_fnc_getParamValue) do {
 				};
 			};
 			case (_westUniform select 0 == "Apex"): {
-				if ("ApexWeapons" call BIS_fnc_getParamValue == 1) then {
+				if (("ApexWeapons" call BIS_fnc_getParamValue) == 1) then {
 					_westUniform == "Vanilla";
 				};
 			};
@@ -192,7 +191,7 @@ switch ("EastUniformSet" call BIS_fnc_getParamValue) do {
 				};
 			};
 			case (_eastUniform select 0 == "Apex"): {
-				if ("ApexWeapons" call BIS_fnc_getParamValue == 1) then {
+				if (("ApexWeapons" call BIS_fnc_getParamValue) == 1) then {
 					_eastUniform == "Vanilla";
 				};
 			};

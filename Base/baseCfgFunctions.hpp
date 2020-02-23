@@ -8,10 +8,11 @@
 class baseFunctions {
 	tag = "PSQ";
 	class functions {
-		file = "setup\functions";
-		class fsmLoop;
+		file = "Base\functions";
+		//class fsmLoop;
 		class sectorOwnerChange;
 		class setup;
 		class startParams;
+		class zeusDebug;
 	};
 };

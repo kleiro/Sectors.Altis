@@ -5,14 +5,11 @@
  * @Last Modified time: 2018-04-03 12:23:53
  */
 
-class aiMiscFunctions {
+class aiControlFunctions {
     tag = "PSQ";
 	class functions {
-		file = "aiMisc\functions";
-		class aiRespawn;
+		file = "AiControl\functions";
 		class combatMove;
 		class defensiveCover;
-		class setLoadout;
-		class zeusDebug;
 	};
 };

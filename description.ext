@@ -6,12 +6,12 @@
  */
 
  
-respawnDelay = 10;
+/*respawnDelay = 10;
 respawn = 3;
 respawnTemplates[] = {"Counter", "MenuPosition", "MenuInventory"};
 respawnOnStart = 1;
 enableDebugConsole = 1;
-aiKills = 1;
+aiKills = 1;*/
 
 class CfgDebriefing {
 	class End1{
@@ -73,19 +73,19 @@ class Params{
 		title = "Weather";
 		Values[] = {0,1,2,3,4,5,6};
 		texts[] = {"Clear","Cloudy","Foggy","Rainy","Fog & Rain","ThunderStorm","Random"};
-		default = 6;
+		default = 0;
 	};
 	class Time{
 		title = "Time of Day";
 		Values[] ={4,5,7,12,17,19,20,0,50};
 		texts[] = {"Early Twilight", "Dawn", "Morning", "Noon", "Afternoon", "Sunset", "Evening Twilight", "Night","Random"};
-		default = 50;
+		default = 12;
 	};
 };
 
 class CfgFunctions {
 	#include "base\baseCfgFunctions.hpp"
-	#include "aiMisc\aiMiscCfgFunctions.hpp"
+	#include "AiControl\aiControlCfgFunctions.hpp"
 	#include "fsm\fsmCfgFunctions.hpp"
 };
 class CfgRemoteExec {
@@ -103,6 +103,7 @@ class CfgRemoteExec {
 		class enableAI {allowedTargets = 0;};
 		class findNearestEnemy {allowedTargets = 0;};
 		class hideObjectGlobal {allowedTargets = 0;};
+		class doMove {allowedTargets = 0;};
 	};
 };
 

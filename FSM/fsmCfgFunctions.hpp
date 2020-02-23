@@ -9,13 +9,7 @@ class fsmFunctions {
 	tag = "PSQ";
 	class functions {
 		file = "FSM\functions";
-		class reEval {
-			ext = ".fsm";
-		};
-		class sectorChange {
-			ext = ".fsm";
-		};
-		class unitMove {
+		class aggressiveGroup {
 			ext = ".fsm";
 		};
 		class respawnProcess {

@@ -10,7 +10,7 @@ params ["_unit","_class"];
 switch (isPlayer _unit) do {
 	case false : {
 		_class = floor(random 7);
-		_loadout = selectRandom ((missionNamespace getVariable ((str(side _unit)) + "loadout")) select _class)
+		_loadout = selectRandom ((missionNamespace getVariable ((str(side _unit)) + "loadout")) select _class);
 		[_unit, missionConfigFile >> "CfgRespawnInventory" >> _loadout] call BIS_fnc_loadInventory;
 	};
 

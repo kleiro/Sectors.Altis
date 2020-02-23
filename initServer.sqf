@@ -8,17 +8,21 @@
 #include "base\inventoryDefines.hpp"
 #include "base\uniformDefines.hpp"
 
-addMissionEventHandler ["handleDisconnect", {(_this select 0) setVariable ["isPlayer", false, true];}];
+//addMissionEventHandler ["handleDisconnect", {(_this select 0) setVariable ["isPlayer", false, true];}];
 
 //Add an eventhandler to each sector so that it runs fn_sectorOwnerChange on owner switch
+//Also determines where the sector's area is and stores it in the variable "sectorArea"
 {
+	_x setVariable ["sectorArea", ((_x getVariable "areas") select 0)];
+	
 	[ _x, "ownerChanged", {
 		params[ "_sector", "_owner", "_ownerOld" ];
 		[_sector, _owner, _ownerOld] call psq_fnc_sectorOwnerChange;
 	}] call BIS_fnc_addScriptedEventHandler; 
-}forEach ( true call BIS_fnc_moduleSector );
 
-missionNamespace setVariable ["debug", false]; //Enables zeus debug when set to true
+}forEach ([true] call BIS_fnc_moduleSector);
+
+missionNamespace setVariable ["debug", true]; //Enables zeus debug when set to true
 
 [] call psq_fnc_startParams;
 [] spawn psq_fnc_setup;

@@ -12,7 +12,7 @@ if(isPlayer _unit) exitWith {};
 [_unit, true] remoteExec ["hideObjectGlobal", 2, false];
 
 _group = _unit getVariable "group";
-_currentObjective = _group getVariable "objective";
+_currentObjective = (_group getVariable "objective");
 _class = _unit getVariable "class";
 _ownedTriggers = [];
 
@@ -50,17 +50,6 @@ switch (true) do {
 		while {_spawnPos isEqualTo [0,0]} do {
 			_spawnPos = [[[_closestTrigger],["water"]] call bis_fnc_randomPos, 0, 10, 2, 0, 1.0, 0, [],[0,0]] call BIS_fnc_findSafePos;
 		};
-		/*if(_spawnPos isEqualTo [0,0]) then {
-			if(side _unit == west) then {
-				_spawnPos = [["bluBase"],["water"],{count (_this isFlatEmpty [1, -1, 1.2]) > 0}] call bis_fnc_randomPos;
-				diag_log format ["$$$ RESPAWN 3: %1 @ %2", _unit, _spawnPos];
-			} else {
-				_spawnPos = [["redBase"],["water"],{count (_this isFlatEmpty [1, -1, 1.2]) > 0}] call bis_fnc_randomPos;
-				diag_log format ["$$$ RESPAWN 4: %1 @ %2", _unit, _spawnPos];
-			};
-		};
-		*/
-		//diag_log format ["$$$ RESPAWN 2: %1 @ %2", _unit, _spawnPos];
 	};
 	default {
 		if(side _unit == west) then {
